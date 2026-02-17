@@ -19,7 +19,7 @@
 # 🧠 LeetCode Stats
 
 <p align="center">
-<img src="https://leetcard.jacoblin.cool/yourusername?theme=dark&font=Nunito&ext=heatmap" />
+<img src="https://leetcard.jacoblin.cool/nitishkumarkushwaha?theme=dark&font=Nunito&ext=heatmap" />
 </p>
 
 ---
@@ -142,15 +142,12 @@ Built React Ecommerce Frontend
 
 ---
 
-# ⚡ Fun Zone
+# ⚡ Fun Fact
 
 ```javascript
-const nitish = {
-  code: ["JavaScript", "TypeScript", "Python", "C++"],
-  technologies: ["React", "Node", "MongoDB"],
-  passion: "Building scalable apps"
-};
-
-while(true){
-  nitish.code();
+while(alive){
+   eat();
+   code();
+   sleep();
+   repeat();
 }
