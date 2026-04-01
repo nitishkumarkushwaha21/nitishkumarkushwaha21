@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/tree2-banner.png" alt="Nitish Kumar Kushwaha banner" width="100%" />
+<img src="./assets/tree2-top.jpg" alt="Tree banner" width="100%" />
 
 <br />
 
@@ -64,6 +64,21 @@ I am a CSE student at IIIT Ranchi focused on building full-stack products that f
   </tr>
 </table>
 
+<details>
+  <summary><strong>More Screenshots</strong></summary>
+  <br />
+  <p align="center">
+    <img src="./images/algonte (1).png" alt="AlgoNote screenshot 1" width="32%" />
+    <img src="./images/algonte (2).png" alt="AlgoNote screenshot 2" width="32%" />
+    <img src="./images/algonte (3).png" alt="AlgoNote screenshot 3" width="32%" />
+  </p>
+  <p align="center">
+    <img src="./images/algonte (4).png" alt="AlgoNote screenshot 4" width="32%" />
+    <img src="./images/algonte (5).png" alt="AlgoNote screenshot 5" width="32%" />
+    <img src="./images/algonte (6).png" alt="AlgoNote screenshot 6" width="32%" />
+  </p>
+</details>
+
 ---
 
 ### ReWear
@@ -84,6 +99,20 @@ I am a CSE student at IIIT Ranchi focused on building full-stack products that f
   </tr>
 </table>
 
+<details>
+  <summary><strong>More Screenshots</strong></summary>
+  <br />
+  <p align="center">
+    <img src="./images/rewear (1).png" alt="ReWear screenshot 1" width="32%" />
+    <img src="./images/rewear (2).png" alt="ReWear screenshot 2" width="32%" />
+    <img src="./images/rewear (3).png" alt="ReWear screenshot 3" width="32%" />
+  </p>
+  <p align="center">
+    <img src="./images/rewear (4).png" alt="ReWear screenshot 4" width="32%" />
+    <img src="./images/rewear (5).png" alt="ReWear screenshot 5" width="32%" />
+  </p>
+</details>
+
 ---
 
 ### VedaAI Assessment Creator
@@ -103,6 +132,16 @@ I am a CSE student at IIIT Ranchi focused on building full-stack products that f
     </td>
   </tr>
 </table>
+
+<details>
+  <summary><strong>More Screenshots</strong></summary>
+  <br />
+  <p align="center">
+    <img src="./images/veda (1).png" alt="VedaAI screenshot 1" width="32%" />
+    <img src="./images/veda (2).png" alt="VedaAI screenshot 2" width="32%" />
+    <img src="./images/veda (3).png" alt="VedaAI screenshot 3" width="32%" />
+  </p>
+</details>
 
 ---
 
