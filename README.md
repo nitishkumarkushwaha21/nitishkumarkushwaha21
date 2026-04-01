@@ -63,7 +63,7 @@ The technically interesting part was designing an IDE-style experience with prob
 
     </td>
     <td width="46%" align="center">
-      <img src="./assets/algonote-preview.gif" alt="AlgoNote AI preview" width="100%" />
+      <img src="./assets/algonote-preview-v2.gif" alt="AlgoNote AI preview" width="100%" />
     </td>
   </tr>
 </table>
@@ -75,7 +75,7 @@ The technically interesting part was designing an IDE-style experience with prob
 <table>
   <tr>
     <td width="46%" align="center">
-      <img src="./assets/rewear-preview.gif" alt="ReWear preview" width="100%" />
+      <img src="./assets/rewear-preview-v2.gif" alt="ReWear preview" width="100%" />
     </td>
     <td width="54%" valign="top">
 
@@ -111,7 +111,7 @@ The strongest engineering part was coordinating frontend workflows with asynchro
 
     </td>
     <td width="46%" align="center">
-      <img src="./assets/veda-preview.gif" alt="VedaAI preview" width="100%" />
+      <img src="./assets/veda-preview-v2.gif" alt="VedaAI preview" width="100%" />
     </td>
   </tr>
 </table>
