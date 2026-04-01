@@ -26,7 +26,7 @@ I am a CSE student at IIIT Ranchi focused on building full-stack products that f
 
 - Open to `Internships` and `Entry-Level Roles`
 - Interested in `Full-Stack`, `Frontend`, `Backend`, and `Software Engineer` positions
-- Solved `410+` DSA problems and actively practicing problem solving
+- Solved `500+` DSA problems and actively practicing problem solving
 - Peak LeetCode contest rating: `1767`
 - I enjoy vibe coding and exploring the wonder of AI through product-building
 
