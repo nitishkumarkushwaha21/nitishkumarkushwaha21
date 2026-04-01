@@ -1,0 +1,1104 @@
+GitHub username : https://github.com/nitishkumarkushwaha21
+linkdn : https://www.linkedin.com/in/nitishkumar2026
+resume present as pdf in current folder
+
+my best 4 project -
+1. algonote , ->my personal fav , has potential to to go live for users , i am planning the same  u can check lazynote folder for updated content , and for basic prev version :  readme file : # AlgoNote AI
+
+AlgoNote AI is a full-stack DSA revision platform that combines problem solving, note taking, playlist-to-sheet generation, and profile-guided practice inside one workspace.
+
+## Highlights
+
+- IDE-style workspace for DSA files and folders
+- Rich per-problem editor for brute/better/optimal approaches
+- One-click LeetCode import (metadata + statement + starter snippets)
+- YouTube playlist to revision sheet pipeline
+- Profile analysis with weak-area recommendations
+- Auth-aware, user-scoped API usage via gateway
+
+## Why This Project
+
+Interview prep tools are usually fragmented: browser tabs, notes apps, random docs, and spreadsheets.
+
+AlgoNote AI unifies the loop:
+
+1. Discover questions
+2. Organize and solve
+3. Store notes and complexity analysis
+4. Generate targeted revision tasks
+
+## Main Features
+
+### Problem Workspace
+
+- Monaco-based coding editor
+- Multi-solution layout: brute, better, optimal
+- Notes, tags, difficulty, and complexity fields
+- Save and revisit every problem state
+
+### Explorer-Like File System
+
+- Folder/file hierarchy like an IDE sidebar
+- Topic-wise and sheet-wise structuring
+- Rename, delete, and revision-state controls
+
+### LeetCode Import
+
+- Input a LeetCode URL
+- Auto-fetches title, slug, difficulty, description, tags, and starter code
+- Persists imported content directly into your problem record
+
+### YouTube Playlist to Sheet
+
+- Import playlist videos
+- Match videos to LeetCode problems using deterministic + AI-assisted mapping
+- Store generated sheet in database
+- Add full sheet to workspace as files in one action
+
+### Profile Analysis
+
+- Fetch LeetCode public profile stats
+- Generate recommendations by weak area
+- Import weak-area questions into workspace structure
+
+### Auth and Request Context
+
+- Clerk on frontend and gateway
+- Gateway forwards authenticated user context to downstream services
+- Data operations are scoped through API context
+
+## Architecture
+
+```mermaid
+flowchart LR
+    FE[Client\nReact + Vite] --> GW[Gateway\n:5001]
+
+    GW --> US[Unified Service\nFiles + Problems + AI\n:5007]
+    GW --> YS[YouTube Playlist Service\n:5005]
+    GW --> PS[Profile Analysis Service\n:5006]
+
+    US --> PG[(PostgreSQL)]
+    YS --> PG
+    PS --> MG[(MongoDB)]
+
+    US --> LC[LeetCode GraphQL]
+    YS --> YT[YouTube Data API]
+    YS --> OR[OpenRouter]
+    PS --> LC
+```
+
+## Request Routing Overview
+
+```mermaid
+flowchart TD
+    A[/api/files] --> G[Gateway]
+    B[/api/problems] --> G
+    C[/api/ai] --> G
+    D[/api/youtube-playlist] --> G
+    E[/api/profile-analysis] --> G
+
+    G --> U[Unified Service]
+    G --> Y[YouTube Playlist Service]
+    G --> P[Profile Analysis Service]
+
+    U --> U1[files routes]
+    U --> U2[problem routes]
+    U --> U3[ai routes]
+```
+
+## Core Flows
+
+### 1) LeetCode URL Import
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant FE as Frontend
+    participant GW as Gateway
+    participant US as Unified Service
+    participant LC as LeetCode API
+
+    U->>FE: Paste problem URL
+    FE->>GW: POST /api/problems/import
+    GW->>US: Forward request
+    US->>LC: Query by titleSlug
+    LC-->>US: Problem payload
+    US-->>FE: Normalized metadata
+    FE->>GW: PUT /api/problems/:fileId
+    GW->>US: Persist problem details
+```
+
+### 2) Playlist Import and Add to Workspace
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant FE as Frontend
+    participant GW as Gateway
+    participant YS as Playlist Service
+    participant YT as YouTube API
+    participant OR as OpenRouter
+    participant US as Unified Service
+
+    U->>FE: Submit playlist URL
+    FE->>GW: POST /api/youtube-playlist/import
+    GW->>YS: Forward request
+    YS->>YT: Fetch videos
+    YS->>OR: Resolve likely LeetCode matches
+    YS-->>FE: Generated sheet
+
+    U->>FE: Add sheet to workspace
+    FE->>GW: POST /api/youtube-playlist/sheet/:id/create-folder
+    GW->>YS: Create workspace folder/files
+    YS->>US: POST /api/files (folder + files)
+    YS->>US: PUT /api/problems/:fileId (populate content)
+    YS-->>FE: Import success
+```
+
+### 3) Profile Analysis to Recommendations
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant FE as Frontend
+    participant GW as Gateway
+    participant PA as Profile Analysis Service
+    participant LC as LeetCode API
+
+    U->>FE: Enter username
+    FE->>GW: GET /api/profile-analysis/:username
+    GW->>PA: Forward request
+    PA->>LC: Fetch public stats
+    LC-->>PA: Profile numbers
+    PA-->>FE: Analysis response
+
+    FE->>GW: POST /api/profile-analysis/recommendations
+    GW->>PA: Build topic-wise suggestions
+    PA-->>FE: Curated recommendations
+```
+
+## Tech Stack
+
+### Frontend
+
+- React 19 + Vite
+- React Router
+- Zustand
+- Tailwind CSS
+- Monaco Editor
+- Framer Motion
+- Axios
+- Clerk
+
+### Backend
+
+- Node.js + Express
+- API Gateway with proxy middleware
+- Unified service for files, problems, and AI endpoints
+- Playlist service for YouTube ingestion and matching
+- Profile analysis service for stats and recommendations
+- Sequelize (PostgreSQL) + Mongoose (MongoDB)
+
+### External Integrations
+
+- LeetCode GraphQL
+- YouTube Data API v3
+- OpenRouter
+
+## Repository Structure
+
+```text
+.
+|- client/
+|  |- src/
+|  |  |- components/
+|  |  |- pages/
+|  |  |- services/
+|  |  `- store/
+|- backend/
+|  |- gateway/
+|  `- services/
+|     |- unified-service/
+|     |- youtube-playlist-service/
+|     `- profile-analysis-service/
+|- docker-compose.yml
+|- start-backend.ps1
+`- README.md
+```
+
+## Local Development
+
+### 1) Install dependencies
+
+```bash
+npm install
+npm install --prefix client
+npm install --prefix backend
+npm install --prefix backend/gateway
+npm install --prefix backend/services/unified-service
+npm install --prefix backend/services/youtube-playlist-service
+npm install --prefix backend/services/profile-analysis-service
+```
+
+### 2) Configure environment
+
+```bash
+cp .env.example .env
+```
+
+Fill required variables in root `.env`:
+
+- `DATABASE_URL`
+- `OPENAI_API_KEY` (or OpenRouter-compatible key)
+- `YOUTUBE_API_KEY`
+- `MONGO_URI`
+- `CLERK_SECRET_KEY`
+- `VITE_CLERK_PUBLISHABLE_KEY`
+
+### 3) Run backend services
+
+From repo root:
+
+```bash
+npm run start:backend
+```
+
+### 4) Run frontend
+
+```bash
+npm run dev --prefix client
+```
+
+## Docker Deployment
+
+Build and start all services:
+
+```bash
+docker compose up --build -d
+```
+
+Update stack after changes:
+
+```bash
+docker compose pull
+docker compose up -d --remove-orphans
+```
+
+Included containers:
+
+- client
+- gateway
+- unified-service
+- youtube-playlist-service
+- profile-analysis-service
+- mongodb
+
+## EC2 Quick Deploy
+
+### 1) Provision
+
+- Ubuntu 22.04 LTS
+- 30 GB+ disk
+- Open ports: 22, 80, 443 (if TLS enabled)
+
+### 2) Install runtime tools
+
+```bash
+sudo apt-get update
+sudo apt-get install -y docker.io docker-compose-plugin git
+sudo usermod -aG docker $USER
+```
+
+Reconnect SSH once after adding Docker group.
+
+### 3) Clone and configure
+
+```bash
+sudo mkdir -p /opt/algonote
+sudo chown -R $USER:$USER /opt/algonote
+cd /opt/algonote
+git clone <your-repo-url> .
+```
+
+Create root `.env` with production values.
+
+### 4) Start
+
+```bash
+docker compose pull
+docker compose up -d --remove-orphans
+```
+
+### 5) Verify
+
+```bash
+docker compose ps
+docker compose logs -f gateway
+```
+
+## API Surface (High Level)
+
+- `GET /api/files`
+- `POST /api/files`
+- `PUT /api/files/:id`
+- `DELETE /api/files/:id`
+- `GET /api/problems/:fileId`
+- `PUT /api/problems/:fileId`
+- `POST /api/problems/import`
+- `POST /api/ai/analyze`
+- `POST /api/youtube-playlist/import`
+- `GET /api/youtube-playlist/sheets`
+- `GET /api/youtube-playlist/sheet/:id`
+- `POST /api/youtube-playlist/sheet/:id/create-folder`
+- `GET /api/profile-analysis/:username`
+- `POST /api/profile-analysis/recommendations`
+- `POST /api/profile-analysis/import-weak-areas`
+
+## Troubleshooting
+
+- Backend exits with `EADDRINUSE`: a service port is already occupied. Free the port or change service port env values.
+- Playlist import succeeds but add-to-workspace fails: verify `UNIFIED_SERVICE_URL`, `FILE_SERVICE_URL`, and `PROBLEM_SERVICE_URL` are reachable from playlist service runtime.
+- Missing auth behavior: ensure `CLERK_SECRET_KEY` and `VITE_CLERK_PUBLISHABLE_KEY` are correctly set.
+
+## Vision
+
+AlgoNote AI is moving toward an interview-prep operating system where discovery, solving, revision, and feedback loops live in one place with minimal context switching.
+
+---------------------------------------------------------------
+2: rewear - avg full stack project - # ReWear - Clothing Swap Platform
+
+A full-stack application for swapping clothing items built with React, Node.js, and MongoDB.
+
+## Features
+
+- User authentication (login/signup)
+- Protected routes
+- User profile management
+- Item browsing and management
+- Admin panel
+- Points system
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- MongoDB (local or cloud instance)
+- npm or yarn
+
+### Backend Setup
+
+1. Navigate to the server directory:
+
+   ```bash
+   cd server
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the server directory with the following variables:
+
+   ```
+   PORT=3000
+   MONGODB_URI=mongodb://localhost:27017/rewear
+   JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+   AWS_ACCESS_KEY_ID=your-aws-access-key
+   AWS_SECRET_ACCESS_KEY=your-aws-secret-key
+   AWS_REGION=us-east-1
+   AWS_S3_BUCKET_NAME=your-s3-bucket-name
+   ```
+
+4. Start the server:
+   ```bash
+   npm start
+   ```
+
+### Frontend Setup
+
+1. Navigate to the client directory:
+
+   ```bash
+   cd client
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Authentication Integration
+
+The application now has a complete authentication system:
+
+### Frontend Features
+
+- **AuthContext**: Manages user authentication state
+- **Protected Routes**: Automatically redirects unauthenticated users to login
+- **Public Routes**: Redirects authenticated users to dashboard
+- **Token Management**: Automatically handles JWT tokens in API requests
+- **Logout Functionality**: Clears user data and redirects to home
+
+### Backend Features
+
+- **User Registration**: Creates new user accounts with password hashing
+- **User Login**: Authenticates users and returns JWT tokens
+- **JWT Middleware**: Protects routes that require authentication
+- **Password Validation**: Ensures strong passwords with special characters
+- **Email Validation**: Validates email format and uniqueness
+
+### API Endpoints
+
+- `POST /api/users/register` - User registration
+- `POST /api/users/login` - User login
+- `GET /api/users/profile` - Get user profile (protected)
+- `PUT /api/users/profile` - Update user profile (protected)
+
+### Usage
+
+1. Users can register with name, email, and password
+2. Users can login with email and password
+3. Authenticated users can access protected routes
+4. Users can logout and will be redirected to home page
+5. Admin users have access to admin panel
+
+## File Structure
+
+```
+├── client/
+│   ├── src/
+│   │   ├── context/
+│   │   │   └── AuthContext.jsx
+│   │   ├── pages/
+│   │   │   ├── LoginPage.jsx
+│   │   │   └── SignupPage.jsx
+│   │   ├── components/
+│   │   │   └── Navbar.jsx
+│   │   └── services/
+│   │       └── api.js
+├── server/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── userController.js
+│   │   ├── middlewares/
+│   │   │   └── authMiddleware.js
+│   │   ├── models/
+│   │   │   └── User.js
+│   │   ├── routes/
+│   │   │   └── userRoutes.js
+│   │   └── validations/
+│   │       └── userValidation.js
+```
+
+## Security Features
+
+- Password hashing with bcrypt
+- JWT token authentication
+- Input validation with Joi
+- CORS configuration
+- Protected API endpoints
+
+----------------------------------------------------------------
+3: # Veda AI Assessment Creator - 2 2nd most hard done with ai but managable to explain  
+
+Production-ready full-stack implementation of the assessment brief in [vedaai_assessment_.md](vedaai_assessment_.md).
+
+![Status](https://img.shields.io/badge/Status-Deployment%20Ready-16a34a)
+![Frontend](https://img.shields.io/badge/Frontend-Next.js%2016-0f172a)
+![Backend](https://img.shields.io/badge/Backend-Node%20%2B%20Express-2563eb)
+![Queue](https://img.shields.io/badge/Queue-BullMQ-f59e0b)
+![Database](https://img.shields.io/badge/Database-MongoDB-22c55e)
+![Realtime](https://img.shields.io/badge/Realtime-Socket.IO-a855f7)
+
+## Extra Features Added (Top Highlights)
+
+> [!IMPORTANT]
+> Beyond the base assessment, this project includes multiple UX and product upgrades.
+
+- Profile module with persistent save:
+  - Name, class, subject, school name/location/logo URL saved via Zustand persistence.
+  - Logged-in email auto-bound as read-only.
+  - Desktop navbar shows only first word of saved name.
+- Desktop shell improvements:
+  - School name box above Settings in desktop sidebar.
+  - Profile and account controls improved for desktop/mobile.
+- Home workflow section:
+  - Dedicated visual journey page for assignment creation and teacher collaboration.
+- Assignment management improvements:
+  - Assignment detail page with rename support.
+  - Direct PDF download from assignment detail view using `@react-pdf/renderer`.
+  - Difficulty display tags on assignment detail page before export:
+    - No difficulty (show only question + marks)
+    - `[easy]` text mode
+    - Color-badge mode
+  - Downloaded PDF reflects selected difficulty display mode (no AI regenerate needed).
+- AI Toolkit visual upgrades:
+  - Draft summary, progress bar, regenerate-first behavior, and cleaner empty states.
+- Better generation input quality:
+  - Section grouping tag support (`question-type`, `difficulty`, `marks`).
+  - Structured prompt layering with profile and source material context.
+  - Optional source upload supports PDF and TXT (max 10MB).
+- Output rendering improvements:
+  - Difficulty badge chips in generated paper view.
+  - Direct and consistent PDF generation via `@react-pdf/renderer`.
+
+### Explicit feature checklist requested
+
+- Assignment detail page improvements: rename flow, detail summary, direct PDF download.
+- Profile page and persistence: saved profile fields persist and reflect in desktop UI.
+- Login-linked email behavior: profile email field is bound to authenticated user email and remains read-only.
+- Form improvements for better generation: tighter validation, improved upload handling, structured generation payload.
+- Home workflow page: dedicated visual journey sections with responsive media presentation.
+- Improved AI Toolkit visual behavior: progress indicator, regenerate-first behavior, cleaner empty-state handling.
+- Custom section grouping behavior in generated paper: supports grouping by question type, difficulty, or marks.
+
+## Quick Status
+
+| Area | Status |
+|---|---|
+| Core assessment features | ✅ Complete |
+| Regenerate flow | ✅ Complete |
+| Difficulty badge UI | ✅ Complete |
+| Direct PDF download (`@react-pdf/renderer`) | ✅ Complete |
+
+> [!NOTE]
+> PDF download is generated client-side using `@react-pdf/renderer`, so browser print headers/footers are not included.
+
+## What this project does
+
+Teacher workflow end-to-end:
+- Create assignments with due date, question mix, marks, optional instructions, and optional source file upload (PDF or TXT).
+- Start AI generation via backend queue jobs.
+- Track generation in real time using Socket.IO events.
+- Persist assignments and generated papers in MongoDB.
+- View generated paper in clean desktop/mobile layouts.
+- Regenerate paper and download clean PDF output directly.
+
+## Tech stack
+
+Frontend:
+- Next.js (App Router) + TypeScript
+- Zustand
+- React Hook Form + Zod
+- @react-pdf/renderer
+- Tailwind CSS
+- Socket.IO Client
+- Clerk auth
+
+Backend:
+- Node.js + Express + TypeScript
+- MongoDB + Mongoose
+- Redis + BullMQ
+- Socket.IO
+- Zod
+
+AI layer:
+- Adapter architecture in [backend/src/modules/generation/ai-adapter.ts](backend/src/modules/generation/ai-adapter.ts)
+- OpenRouter-ready prompt flow with deterministic fallback generation
+
+## Architecture overview
+
+```mermaid
+flowchart LR
+  UI[Next.js Teacher UI] -->|POST /api/assignments| ASG[Assignment API]
+  UI -->|POST /api/generation/start| GEN[Generation API]
+  GEN -->|enqueue| Q[BullMQ Queue]
+  Q --> W[Worker]
+  W --> M[(MongoDB)]
+  W --> R[(Redis)]
+  W -->|generation events| WS[Socket.IO]
+  WS --> UI
+  UI -->|GET /result /detail| GEN
+```
+
+## Feature coverage
+
+### Core features from assessment
+
+1. Assignment creation frontend:
+- Done: due date, question rows, marks, additional instructions.
+- Done: optional file upload.
+- Done: validation for required and non-negative/non-zero values.
+- Done: state management via Zustand.
+- Done: WebSocket status management.
+
+2. AI question generation:
+- Done: request is converted into structured payload and prompt.
+- Done: output normalized into section/question/difficulty/marks model.
+- Done: raw LLM response is not rendered directly.
+
+3. Backend system:
+- Done: Express + TypeScript.
+- Done: MongoDB for assignments and generation results.
+- Done: Redis + BullMQ queue + worker.
+- Done: WebSocket notifications for queued/processing/completed/failed.
+
+4. Output page:
+- Done: student info fields in paper model and paper sheet view.
+- Done: section title, instruction, question list.
+- Done: difficulty and marks per question.
+- Done: clean responsive rendering.
+
+### Bonus features
+
+- Regenerate paper: done.
+- Difficulty badges: done (rendered as badge chips in paper sections).
+- Download as PDF: done.
+  - Implemented with `@react-pdf/renderer` for direct export.
+  - Export respects selected difficulty display mode (`none`, `text`, `color`).
+
+## Extra features added beyond brief
+
+- Home dashboard journey sections and improved visual shell.
+- Assignment page polish and responsive controls.
+- AI toolkit progress bar and regenerate-first flow.
+- Profile page complete redesign:
+  - Desktop and mobile-specific layouts.
+  - Persisted profile form (name, class, subject, school details).
+  - Email auto-bound to logged-in session.
+  - Hover interactions and visual polish for avatar/logo.
+  - Independent Home button behavior for desktop/mobile.
+- Desktop shell improvements:
+  - Navbar displays first name only from saved profile.
+  - School name box shown above Settings in desktop sidebar.
+
+## Key backend routes
+
+Assignments:
+- POST /api/assignments
+- GET /api/assignments
+- GET /api/assignments/:assignmentId
+- PATCH /api/assignments/:assignmentId/rename
+- DELETE /api/assignments/:assignmentId
+
+Generation:
+- POST /api/generation/start
+- POST /api/generation/:jobId/regenerate
+- GET /api/generation/:jobId
+- GET /api/generation/:jobId/result
+
+Health:
+- GET /api/health
+- GET /api/health/diagnostics
+
+## WebSocket contract
+
+Events emitted:
+- generation:queued
+- generation:processing
+- generation:completed
+- generation:failed
+
+Client actions:
+- generation:subscribe { assignmentId }
+- generation:unsubscribe { assignmentId }
+
+Room convention:
+- assignment:{assignmentId}
+
+## Data and persistence notes
+
+- Assignment and generation data persist in MongoDB.
+- Queue/job state and worker operations use Redis/BullMQ.
+- Profile values persist in frontend Zustand store (local persistence), including:
+  - userName
+  - className
+  - teacherSubject
+  - schoolName
+  - schoolLocation
+  - schoolIconUrl
+
+## File upload support
+
+Frontend validation in [veda-frontend/src/modules/assignments/schema.ts](veda-frontend/src/modules/assignments/schema.ts):
+- PDF and TXT supported.
+- TXT MIME handling supports browser variations (`text/plain`, `text/*`) plus `.txt` extension.
+- Max file size 10MB.
+
+Backend extraction in [backend/src/modules/generation/file-extractor.ts](backend/src/modules/generation/file-extractor.ts):
+- PDF text extraction.
+- TXT plain text extraction with MIME/extension fallback support.
+
+## Environment variables
+
+Backend ([backend/src/config/env.ts](backend/src/config/env.ts)):
+- PORT
+- CORS_ORIGIN
+- MONGO_URI
+- REDIS_URL
+- CLERK_SECRET_KEY
+- OPENROUTER_API_KEY
+- OPENROUTER_MODEL
+
+Frontend ([veda-frontend/src/lib/env.ts](veda-frontend/src/lib/env.ts)):
+- NEXT_PUBLIC_API_URL
+- NEXT_PUBLIC_SOCKET_URL
+
+### Quick .env file structure (easy setup)
+
+Create these files first:
+
+- [backend/.env](backend/.env)
+- [veda-frontend/.env](veda-frontend/.env)
+
+Backend template ([backend/.env](backend/.env)):
+
+```dotenv
+PORT=4000
+CORS_ORIGIN=http://localhost:3000
+
+MONGO_URI=mongodb://127.0.0.1:27017/veda-ai
+REDIS_URL=redis://127.0.0.1:6379
+
+CLERK_SECRET_KEY=sk_test_xxx
+
+OPENROUTER_API_KEY=or_xxx
+OPENROUTER_MODEL=openai/gpt-4o-mini
+```
+
+Frontend template ([veda-frontend/.env](veda-frontend/.env)):
+
+```dotenv
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_xxx
+NEXT_PUBLIC_API_URL=http://localhost:4000/api
+NEXT_PUBLIC_SOCKET_URL=http://localhost:4000
+```
+
+Setup notes:
+
+- Keep backend on port `4000` to match frontend defaults above.
+- If you change backend port/host, update both `NEXT_PUBLIC_API_URL` and `NEXT_PUBLIC_SOCKET_URL`.
+- Use real Clerk/OpenRouter keys for full auth + AI generation.
+
+## Local development
+
+Prerequisites:
+- Node.js 18+
+- MongoDB
+- Redis
+- Clerk keys
+- OpenRouter key (if using provider mode)
+
+Install:
+
+```bash
+cd backend && npm install
+cd ../veda-frontend && npm install
+```
+
+Run backend:
+
+```bash
+cd backend
+npm run dev
+```
+
+Run frontend:
+
+```bash
+cd veda-frontend
+npm run dev
+```
+
+Quality checks:
+
+```bash
+cd veda-frontend && npm run lint
+cd ../backend && npm run build
+```
+
+## Deployment notes
+
+- Deploy backend and frontend separately with consistent env values.
+- Set CORS origin(s) for frontend host(s).
+- Ensure Redis and Mongo are reachable from backend runtime.
+- Validate Clerk and OpenRouter secrets in production.
+
+--------------------------------------------------------------------
+4. krea workflow clone - most tough , hard to explain , done with the help of ai agents , readme : [<div align="center">
+
+# ⚡ NextFlow — Visual AI Workflow Builder
+
+**Build, connect, and run automated AI pipelines visually.**
+
+NextFlow is a visual workflow builder where users drag and drop nodes onto a canvas to create automated AI pipelines for processing text, images, and videos — no code required.
+
+[![MIT License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
+
+</div>
+
+---
+
+## 🎬 Demo
+
+|                    |               |
+| ------------------ | ------------- |
+| 🌐 **Live Demo**   | _Coming soon_ |
+| 🖼️ **Screenshots** | _Coming soon_ |
+| 🎥 **Demo Video**  | _Coming soon_ |
+
+---
+
+## ✨ Key Features
+
+- 🖱️ **Visual drag-and-drop builder** — Arrange and connect nodes on a React Flow canvas
+- 🔗 **Node-based pipeline system** — Build complex workflows by wiring outputs to inputs
+- 🤖 **Google Gemini AI integration** — LLM nodes powered by Gemini 1.5 Flash / Pro
+- 🖼️ **Image processing** — Crop nodes with pixel-precise X/Y/W/H control via `sharp`
+- 🎞️ **Video processing** — Extract specific frames from video at any timestamp
+- ⚡ **Parallel DAG execution** — Independent branches run concurrently for maximum speed
+- 📜 **Run history tracking** — Every execution is logged with per-node inputs, outputs, and status
+- 🔐 **User authentication** — Secure sign-in and scoped run history via Clerk
+- 📤 **File uploads** — Image and video uploads handled through Transloadit
+- ↩️ **Undo / Redo** — Full canvas history with Zustand-powered snapshots
+- 🔒 **Type-safe connections** — Handles enforce compatible types (image → image, text → text)
+- 🚫 **Smart input disabling** — Manual inputs lock when a handle is connected
+- 📦 **Workflow import / export** — Save and restore full canvas state as JSON
+
+---
+
+## 🔄 Workflow Examples
+
+### 📸 Product Description Pipeline
+
+```
+Upload Image → Crop Image → LLM Node → Generate product description
+```
+
+### 📹 Marketing Caption Pipeline
+
+```
+Upload Video → Extract Frame → LLM Node → Generate marketing caption
+```
+
+> 💡 Independent branches (e.g. image pipeline + video pipeline) execute **in parallel** automatically.
+
+---
+
+## 🗺️ Workflow Diagram
+
+```mermaid
+graph TD
+    UploadImage["📷 Upload Image"] --> CropImage["✂️ Crop Image"]
+    CropImage --> LLMNode["🤖 LLM Node"]
+
+    UploadVideo["🎬 Upload Video"] --> ExtractFrame["🎞️ Extract Frame"]
+    ExtractFrame --> LLMNode
+
+    SystemPrompt["📝 System Prompt"] --> LLMNode
+    ProductText["🔤 Product Text"] --> LLMNode
+
+    LLMNode --> Output["✅ Output"]
+```
+
+---
+
+## 🏗️ Architecture Overview
+
+```
+┌─────────────────────────────────────────────┐
+│                   Frontend                   │
+│  Next.js App Router · React Flow Canvas      │
+│  Zustand State Management · Tailwind CSS     │
+└──────────────────┬──────────────────────────┘
+                   │ API Routes
+┌──────────────────▼──────────────────────────┐
+│                   Backend                    │
+│  Next.js API Routes · Prisma ORM             │
+│  PostgreSQL (Neon) · Zod Validation          │
+└──────┬──────────────┬───────────────┬───────┘
+       │              │               │
+┌──────▼───┐  ┌───────▼──────┐  ┌────▼──────┐
+│  Clerk   │  │    Gemini    │  │ Trigger   │
+│  Auth    │  │   AI API     │  │  .dev     │
+└──────────┘  └──────────────┘  └─────┬─────┘
+                                       │
+                               ┌───────▼──────────────┐
+                               │   Media Processing    │
+                               │  Sharp · Transloadit  │
+                               └──────────────────────┘
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer            | Technology                                 |
+| ---------------- | ------------------------------------------ |
+| Framework        | Next.js 14 (App Router), React, TypeScript |
+| Canvas           | React Flow (`@xyflow/react`)               |
+| Styling          | Tailwind CSS                               |
+| State            | Zustand                                    |
+| Database         | PostgreSQL (Neon) via Prisma ORM           |
+| Auth             | Clerk                                      |
+| Background Jobs  | Trigger.dev v3                             |
+| AI               | Google Gemini API                          |
+| Media Uploads    | Transloadit + Uppy                         |
+| Image Processing | Sharp                                      |
+| Video Processing | FFmpeg (via Transloadit)                   |
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/nextflow.git
+cd nextflow/nextflow
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+
+Create a `.env` file in the `nextflow/` directory:
+
+```env
+# Database
+DATABASE_URL=your_neon_postgresql_url
+
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+
+# AI
+GEMINI_API_KEY=your_google_gemini_api_key
+
+# Media Uploads
+NEXT_PUBLIC_TRANSLOADIT_AUTH_KEY=your_transloadit_auth_key
+TRANSLOADIT_SECRET=your_transloadit_secret
+
+# Trigger.dev
+TRIGGER_SECRET_KEY=your_trigger_secret_key
+```
+
+### 4. Run database migrations
+
+```bash
+npx prisma migrate dev
+```
+
+### 5. Start the dev server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 📁 Project Structure
+
+```
+nextflow/src/
+├── app/
+│   ├── api/
+│   │   └── workflow-runs/     # REST API for run history
+│   ├── layout.tsx             # Root layout with ClerkProvider
+│   └── page.tsx               # Main canvas page
+├── components/
+│   └── workflow/
+│       ├── canvas/            # WorkflowCanvas, CanvasOverlays, CanvasArea
+│       ├── nodes/             # LLMNode, CropImageNode, ExtractFrameNode, etc.
+│       ├── sidebar/           # LeftSidebar (node palette), NodeSidebar
+│       └── history/           # RunHistoryPanel, WorkflowHistory
+├── lib/
+│   ├── ai/                    # Gemini client
+│   ├── db/                    # Prisma client
+│   ├── trigger/               # Trigger.dev client
+│   └── workflow/              # DAG engine, validation, connection utils
+├── store/
+│   ├── workflowStore.ts       # Canvas state + undo/redo history
+│   └── workflowRunStore.ts    # Execution state (node statuses, outputs)
+├── trigger/
+│   └── tasks/                 # Per-node Trigger.dev background tasks
+└── types/
+    └── workflow.ts            # Shared TypeScript types
+```
+
+---
+
+## 🔮 Future Improvements
+
+- [ ] **Workflow persistence** — Save and load named workflows from the database
+- [ ] **Workflow templates** — One-click starter workflows for common use cases
+- [ ] **Better error visualization** — Inline error details expandable on failed nodes
+- [ ] **Real-time execution progress** — Live streaming of node status via WebSockets
+- [ ] **Workflow sharing** — Public shareable links to view (not edit) a workflow
+- [ ] **Custom node types** — User-defined nodes with configurable inputs/outputs
+- [ ] **Scheduled workflows** — Cron-based automatic execution
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+Built with ❤️ using Next.js, React Flow, and Google Gemini
+</div>
+- **Google Gemini API** — LLM integration
+- **Transloadit** — file uploads & media processing
+- **Prisma** + **PostgreSQL (Neon)** — database & ORM
+- **Zustand** — state management
+- **Tailwind CSS** — styling with custom Krea design tokens
+
+## Features
+
+- 6 node types: Text, Upload Image, Upload Video, LLM (Gemini), Crop Image, Extract Frame
+- Parallel workflow execution with dependency resolution (DAG)
+- Real-time run history with per-node drill-down
+- Workflow export/import as JSON
+- Pre-built sample workflow: Product Marketing Kit Generator
+
+## Getting Started
+
+```bash
+cd nextflow
+npm install
+```
+
+Copy `.env.local.example` to `.env.local` and fill in your API keys:
+
+- `GEMINI_API_KEY` — Google AI Studio
+- `TRIGGER_SECRET_KEY` — Trigger.dev
+- `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` + `CLERK_SECRET_KEY` — Clerk
+- `NEXT_PUBLIC_TRANSLOADIT_AUTH_KEY` + `TRANSLOADIT_SECRET_KEY` — Transloadit
+- `DATABASE_URL` — Neon PostgreSQL
+
+```bash
+npx prisma generate
+npx prisma db push
+npm run dev
+```
+](https://www.linkedin.com/in/nitishkumar2026)
+
+
+
+----------------------------------------------------------
+intern :refer to resume pdf   ,but  its too weak , 
+leetcode : profile 1 (main) : https://leetcode.com/u/nitishkumarkushwaha/  (u can access it ? questions - 410 , constest - 37 , rating - 1767(max) , highest rank achieved - 2786, currently doing rigiously question to practice ,  on account 2 - https://leetcode.com/u/nikuku/  - rating - 1761 , highest rank - 1090 , contest - 14  (made for relax mind contest giving with no fear of rating drop )-> if this sounds negative for me don't add this info .
+
+roles - fullstack , frontend , backend , software enginerr , 
+hobby - vibe coding , exploring wonder of ai 
+
+i
