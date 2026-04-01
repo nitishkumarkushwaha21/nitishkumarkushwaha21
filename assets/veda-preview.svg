@@ -6,13 +6,13 @@
     <rect x="40" y="40" width="880" height="460" rx="18"/>
   </clipPath>
   <g clip-path="url(#screen-v)">
-    <image href="../veda%20(1).png" x="40" y="40" width="880" height="460" preserveAspectRatio="xMidYMid slice" opacity="1">
+    <image href="../images/veda%20(1).png" x="40" y="40" width="880" height="460" preserveAspectRatio="xMidYMid slice" opacity="1">
       <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.28;0.34;1" dur="12s" repeatCount="indefinite"/>
     </image>
-    <image href="../veda%20(2).png" x="40" y="40" width="880" height="460" preserveAspectRatio="xMidYMid slice" opacity="0">
+    <image href="../images/veda%20(2).png" x="40" y="40" width="880" height="460" preserveAspectRatio="xMidYMid slice" opacity="0">
       <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.28;0.34;0.61;0.67;1" dur="12s" repeatCount="indefinite"/>
     </image>
-    <image href="../veda%20(3).png" x="40" y="40" width="880" height="460" preserveAspectRatio="xMidYMid slice" opacity="0">
+    <image href="../images/veda%20(3).png" x="40" y="40" width="880" height="460" preserveAspectRatio="xMidYMid slice" opacity="0">
       <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.67;0.73;1" dur="12s" repeatCount="indefinite"/>
     </image>
   </g>
