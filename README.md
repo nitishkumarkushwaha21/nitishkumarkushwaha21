@@ -48,6 +48,10 @@ I am a CSE student at IIIT Ranchi focused on building full-stack products that f
 
 ### AlgoNote AI
 
+<table>
+  <tr>
+    <td width="54%" valign="top">
+
 **Built to solve the fragmented interview-prep workflow by combining DSA practice, note-taking, imports, and personalized revision into one workspace.**  
 The technically interesting part was designing an IDE-style experience with problem-level editing, structured content organization, and backend services for imports, recommendations, and user-scoped flows.
 
@@ -57,16 +61,23 @@ The technically interesting part was designing an IDE-style experience with prob
 **Links**  
 [Repository](https://github.com/nitishkumarkushwaha21/Algonote) • [Live Demo](http://algonote.duckdns.org/)
 
-**Animated Preview Placeholder**  
-`[ add moving GIF / screen recording here ]`
-
-```md
-![AlgoNote AI Demo](./assets/algonote-demo.gif)
-```
+    </td>
+    <td width="46%" align="center">
+      <img src="./assets/algonote-preview.svg" alt="AlgoNote AI preview" width="100%" />
+    </td>
+  </tr>
+</table>
 
 ---
 
 ### ReWear
+
+<table>
+  <tr>
+    <td width="46%" align="center">
+      <img src="./assets/rewear-preview.svg" alt="ReWear preview" width="100%" />
+    </td>
+    <td width="54%" valign="top">
 
 **Built to make clothing exchange easier by turning casual swapping into a structured product with listings, authentication, profile flows, and a points-based system.**  
 This project helped me work through practical full-stack concerns like protected routes, item lifecycle management, and backend-driven user actions in a real product flow.
@@ -77,16 +88,17 @@ This project helped me work through practical full-stack concerns like protected
 **Links**  
 [Repository](https://github.com/nitishkumarkushwaha21/rewear-clothing-exchange/) • [Live Demo](https://rewear-clothing-exchange-ecru.vercel.app/)
 
-**Animated Preview Placeholder**  
-`[ add moving GIF / screen recording here ]`
-
-```md
-![ReWear Demo](./assets/rewear-demo.gif)
-```
+    </td>
+  </tr>
+</table>
 
 ---
 
 ### VedaAI Assessment Creator
+
+<table>
+  <tr>
+    <td width="54%" valign="top">
 
 **Built to help teachers generate structured assessments faster with queue-based AI generation, real-time status updates, and export-ready output.**  
 The strongest engineering part was coordinating frontend workflows with asynchronous backend processing, WebSocket updates, and PDF generation while keeping the user experience smooth.
@@ -97,12 +109,12 @@ The strongest engineering part was coordinating frontend workflows with asynchro
 **Links**  
 [Repository](https://github.com/nitishkumarkushwaha21/vedaai-ai-question-maker) • [Live Demo](https://vedaai-ai-question-maker.vercel.app/)
 
-**Animated Preview Placeholder**  
-`[ add moving GIF / screen recording here ]`
-
-```md
-![VedaAI Demo](./assets/vedaai-demo.gif)
-```
+    </td>
+    <td width="46%" align="center">
+      <img src="./assets/veda-preview.svg" alt="VedaAI preview" width="100%" />
+    </td>
+  </tr>
+</table>
 
 ---
 

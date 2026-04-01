@@ -1,0 +1,31 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" rx="28" fill="#020617"/>
+  <rect x="16" y="16" width="928" height="508" rx="20" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+  <rect x="40" y="40" width="880" height="460" rx="18" fill="#020617"/>
+  <clipPath id="screen-v">
+    <rect x="40" y="40" width="880" height="460" rx="18"/>
+  </clipPath>
+  <g clip-path="url(#screen-v)">
+    <image href="../veda%20(1).png" x="40" y="40" width="880" height="460" preserveAspectRatio="xMidYMid slice" opacity="1">
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.28;0.34;1" dur="12s" repeatCount="indefinite"/>
+    </image>
+    <image href="../veda%20(2).png" x="40" y="40" width="880" height="460" preserveAspectRatio="xMidYMid slice" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.28;0.34;0.61;0.67;1" dur="12s" repeatCount="indefinite"/>
+    </image>
+    <image href="../veda%20(3).png" x="40" y="40" width="880" height="460" preserveAspectRatio="xMidYMid slice" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.67;0.73;1" dur="12s" repeatCount="indefinite"/>
+    </image>
+  </g>
+  <rect x="40" y="40" width="880" height="460" rx="18" fill="url(#fade-v)" fill-opacity="0.18"/>
+  <rect x="64" y="64" width="242" height="34" rx="17" fill="#020617" fill-opacity="0.8"/>
+  <circle cx="88" cy="81" r="5.5" fill="#FB7185"/>
+  <circle cx="107" cy="81" r="5.5" fill="#FBBF24"/>
+  <circle cx="126" cy="81" r="5.5" fill="#4ADE80"/>
+  <text x="152" y="86" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="15">VedaAI Assessment Creator</text>
+  <defs>
+    <linearGradient id="fade-v" x1="40" y1="40" x2="920" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
