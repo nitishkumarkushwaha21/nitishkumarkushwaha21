@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/tree2-top.jpg" alt="Tree banner" width="100%" />
+<img src="./assets/tree2-top-horizontal.jpg" alt="Tree banner" width="100%" />
 
 <br />
 
@@ -59,7 +59,7 @@ I am a CSE student at IIIT Ranchi focused on building full-stack products that f
       <a href="https://github.com/nitishkumarkushwaha21/Algonote">Repository</a> • <a href="http://algonote.duckdns.org/">Live Demo</a></p>
     </td>
     <td width="46%" align="center">
-      <img src="./assets/algonote-preview-v2.gif" alt="AlgoNote AI preview" width="100%" />
+      <img src="./images/algonte (1).png" alt="AlgoNote AI preview" width="100%" />
     </td>
   </tr>
 </table>
@@ -86,7 +86,7 @@ I am a CSE student at IIIT Ranchi focused on building full-stack products that f
 <table>
   <tr>
     <td width="46%" align="center">
-      <img src="./assets/rewear-preview-v2.gif" alt="ReWear preview" width="100%" />
+      <img src="./images/rewear (1).png" alt="ReWear preview" width="100%" />
     </td>
     <td width="54%" valign="top">
       <p><strong>Built to make clothing exchange easier by turning casual swapping into a structured product with listings, authentication, profile flows, and a points-based system.</strong></p>
@@ -128,7 +128,7 @@ I am a CSE student at IIIT Ranchi focused on building full-stack products that f
       <a href="https://github.com/nitishkumarkushwaha21/vedaai-ai-question-maker">Repository</a> • <a href="https://vedaai-ai-question-maker.vercel.app/">Live Demo</a></p>
     </td>
     <td width="46%" align="center">
-      <img src="./assets/veda-preview-v2.gif" alt="VedaAI preview" width="100%" />
+      <img src="./images/veda (1).png" alt="VedaAI preview" width="100%" />
     </td>
   </tr>
 </table>
