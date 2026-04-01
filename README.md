@@ -1,153 +1,98 @@
-<h1 align="center">Hi 👋, I'm Nitish Kumar Kushwaha</h1>
+# Hi, I'm Nitish Kumar Kushwaha
 
-<h3 align="center">🚀 Full Stack Developer | MERN Stack | Competitive Programmer</h3>
+Full-stack developer and CSE student at IIIT Ranchi building product-focused web applications with React, Next.js, Node.js, MongoDB, PostgreSQL, and TypeScript. I enjoy turning complex workflows into clean products, scalable backend systems, and developer-focused tools.
 
-<p align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Full+Stack+Developer;MERN+Stack+Specialist;LeetCode+400%2B+Problems;CodeChef+2+Star;React+Next+Node+MongoDB" />
-</p>
+I am currently looking for internships and entry-level software roles in full-stack, frontend, and backend engineering.
 
----
+## What I Bring
 
-# 🌙 Visitor Tracker
+- Strong problem-solving foundation with 400+ DSA problems solved
+- Hands-on experience building full-stack products with authentication, dashboards, APIs, database design, and deployment workflows
+- Comfortable working across frontend, backend, integrations, and product architecture
+- Product mindset focused on usability, execution quality, and real-world impact
 
-<p align="center">
-<img src="https://komarev.com/ghpvc/?username=yourusername&label=Profile%20views&color=0e75b6&style=flat" />
-</p>
+## Featured Project
 
----
+### AlgoNote AI
+[Repository](https://github.com/nitishkumarkushwaha21/Algonote) | [Live Demo](http://algonote.duckdns.org/)
 
-# 🧠 LeetCode Stats
+AlgoNote AI is my flagship project: a full-stack DSA revision platform that combines problem solving, note taking, playlist-to-sheet generation, and profile-guided practice in one workspace.
 
-<p align="center">
-<img src="https://leetcard.jacoblin.cool/nitishkumarkushwaha?theme=dark&font=Nunito&ext=heatmap" />
-</p>
+**Key features**
+- Built an IDE-style workspace for organizing DSA files, folders, and revision content
+- Added a rich per-problem editor with brute, better, and optimal approaches plus notes, tags, and complexity tracking
+- Implemented one-click LeetCode import to fetch metadata, statements, tags, and starter code from a problem URL
+- Created a YouTube playlist-to-revision-sheet pipeline with automated problem matching and one-click workspace import
+- Added profile analysis to identify weak areas and generate targeted recommendations
+- Structured the backend with a gateway and dedicated services for files, problems, AI, playlist ingestion, and profile analysis
 
----
+**Stack**
+React, Vite, Tailwind CSS, Monaco Editor, Node.js, Express, PostgreSQL, MongoDB, Clerk, Docker
 
-# 📊 GitHub Stats (Dark Theme)
+## Selected Projects
 
-<p align="center">
+### ReWear
+[Repository](https://github.com/nitishkumarkushwaha21/rewear-clothing-exchange/) | [Live Demo](https://rewear-clothing-exchange-ecru.vercel.app/)
 
-<img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=tokyonight&border_radius=10" height="180"/>
+Full-stack clothing exchange platform focused on sustainable swapping and user-driven item management.
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=yourusername&theme=tokyonight&border_radius=10" height="180"/>
+- Built authentication, protected routes, and profile management
+- Added item browsing, listing management, and admin controls
+- Implemented a points-based workflow to support exchanges
 
-</p>
+**Stack:** React, Node.js, Express, MongoDB, JWT
 
-<p align="center">
+### Krea Workflow Clone
+[Repository](https://github.com/nitishkumarkushwaha21/krea-workflow-clone-) | [Live Demo](https://nextflow-ashen.vercel.app/)
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=tokyonight&border_radius=10" height="180"/>
+Workflow-oriented frontend project inspired by modern AI product interfaces.
 
-</p>
+- Recreated a polished multi-section product experience with responsive UI
+- Focused on modern layout, visual hierarchy, and smooth user interactions
+- Built to strengthen frontend execution and product-design implementation skills
 
----
+**Stack:** Next.js, React, TypeScript, Tailwind CSS
 
-# 🐍 Contribution Snake Animation
+### VedaAI Question Maker
+[Repository](https://github.com/nitishkumarkushwaha21/vedaai-ai-question-maker) | [Live Demo](https://vedaai-ai-question-maker.vercel.app/)
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/yourusername/yourusername/output/github-contribution-grid-snake-dark.svg">
-</p>
+AI-powered question generation tool designed to turn user input into structured educational content.
 
----
+- Built a user flow for generating questions from prompts or learning input
+- Focused on practical AI-assisted productivity for study and content creation
+- Delivered as a deployable web product with a clean frontend experience
 
-# 🌌 3D Contribution Graph
+**Stack:** Next.js, React, TypeScript, AI integration
 
-<p align="center">
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=yourusername&theme=tokyonight" />
-</p>
+## Skills
 
----
+**Languages**
+C, C++, JavaScript, TypeScript, Python
 
-# 👨‍💻 About Me
+**Frontend**
+React, Next.js, Vite, Tailwind CSS
 
-🎓 CSE Student at IIIT Ranchi  
+**Backend**
+Node.js, Express, REST APIs, authentication, microservice-style architecture
 
-🚀 MERN Stack Developer  
+**Databases and Tools**
+MongoDB, PostgreSQL, MySQL, Redis, Docker, Git, GitHub, Postman, AWS, Vercel
 
-🧠 Solved 400+ DSA Problems  
+## Experience
 
-⭐ CodeChef 2 Star  
+**Full Stack Developer Intern**
+Built a React-based ecommerce frontend and contributed to practical product-facing development.
 
-🏀 Basketball Team Captain  
+## Education and Achievements
 
-🔥 Love building scalable apps  
+- B.Tech in Computer Science and Engineering, IIIT Ranchi
+- Solved 400+ DSA problems
+- CodeChef 2-star programmer
+- Basketball team captain
 
----
+## Links
 
-# ⚡ Tech Stack
-
-<p align="center">
-
-<img src="https://skillicons.dev/icons?i=c,cpp,python,js,ts,react,nextjs,nodejs,express,mongodb,mysql,redis,docker,aws,git,github,vercel,postman,vscode,figma&theme=dark" />
-
-</p>
-
----
-
-# 🚀 Projects
-
-## 🍔 MernEats
-
-Full Stack Food Ordering App
-
-React • TypeScript • MongoDB • Node • Express
-
-Features:
-
-• Authentication  
-• Live tracking  
-• Dashboard  
-• Cloudinary  
-
----
-
-## 👕 ReWear
-
-Clothing Swap Platform
-
-Features:
-
-• JWT Auth  
-• Points System  
-• Admin Panel  
-• Notifications  
-
----
-
-# 💼 Experience
-
-Full Stack Developer Intern
-
-Built React Ecommerce Frontend
-
----
-
-# 🌐 Connect with me
-
-<p align="center">
-
-<a href="https://github.com/yourusername">
-<img src="https://skillicons.dev/icons?i=github&theme=dark" />
-</a>
-
-<a href="https://linkedin.com/in/yourusername">
-<img src="https://skillicons.dev/icons?i=linkedin&theme=dark" />
-</a>
-
-<a href="mailto:nitishkumarkushwaha@hotmail.com">
-<img src="https://skillicons.dev/icons?i=gmail&theme=dark" />
-</a>
-
-</p>
-
----
-
-# ⚡ Fun Fact
-
-```javascript
-while(alive){
-   eat();
-   code();
-   sleep();
-   repeat();
-}
+- GitHub: [nitishkumarkushwaha21](https://github.com/nitishkumarkushwaha21)
+- LinkedIn: [nitishkumar2026](https://www.linkedin.com/in/nitishkumar2026)
+- Resume: [NITISH_RESUME_v2.pdf](./NITISH_RESUME_v2.pdf)
+- Email: [nitishkumarkushwaha@hotmail.com](mailto:nitishkumarkushwaha@hotmail.com)
