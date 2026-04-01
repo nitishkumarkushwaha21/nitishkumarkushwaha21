@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/tree2-top-horizontal.jpg" alt="Tree banner" width="100%" />
+<img src="./assets/tree-top-full.jpg" alt="Tree banner" width="100%" />
 
 <br />
 
@@ -188,20 +188,31 @@ I am a CSE student at IIIT Ranchi focused on building full-stack products that f
 
 ---
 
-## Currently
+## 🔭 Currently
 
-- Iterating on product-minded full-stack projects with cleaner UX and stronger engineering depth
-- Practicing DSA consistently and sharpening contest problem-solving
-- Learning more system design and distributed backend thinking
+| Area | What I'm doing |
+|------|----------------|
+| 🏗️ Building | Iterating on full-stack projects with sharper UX and stronger engineering depth |
+| 🧠 Problem Solving | Practicing DSA consistently and aiming for stronger contest performance |
+| 📐 Learning | Learning system design, distributed systems, and scalable backend architecture |
 
-## Looking For
+---
 
-I am looking for internships and entry-level roles where I can contribute across product development, frontend systems, backend APIs, and full-stack execution. I do best in teams that care about shipping, clarity, and thoughtful engineering.
+## 💼 Open To Work
 
-## Contact
+> Looking for **internships** and **entry-level roles** in full-stack, frontend, or backend engineering.  
+> I do best in teams that care about **shipping**, **clarity**, and **thoughtful engineering**.
 
-- GitHub: [nitishkumarkushwaha21](https://github.com/nitishkumarkushwaha21)
-- LinkedIn: [nitishkumar2026](https://www.linkedin.com/in/nitishkumar2026)
-- LeetCode: [nitishkumarkushwaha](https://leetcode.com/u/nitishkumarkushwaha/)
-- Resume: [View PDF](./NITISH_RESUME_v2.pdf)
-- Email: [nitishkumarkushwaha@hotmail.com](mailto:nitishkumarkushwaha@hotmail.com)
+---
+
+## 📬 Let's Connect
+
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/-%20nitishkumarkushwaha21-black?style=flat-square&logo=github&logoColor=white&labelColor=0f172a)](https://github.com/nitishkumarkushwaha21)
+[![LinkedIn](https://img.shields.io/badge/-%20nitishkumar2026-0A66C2?style=flat-square&logo=linkedin&logoColor=white&labelColor=0A66C2)](https://www.linkedin.com/in/nitishkumar2026)
+[![LeetCode](https://img.shields.io/badge/-%20nitishkumarkushwaha-F59E0B?style=flat-square&logo=leetcode&logoColor=black&labelColor=F59E0B)](https://leetcode.com/u/nitishkumarkushwaha/)
+[![Email](https://img.shields.io/badge/-%20Email%20Me-EA4335?style=flat-square&logo=gmail&logoColor=white&labelColor=EA4335)](mailto:nitishkumarkushwaha@hotmail.com)
+[![Resume](https://img.shields.io/badge/-%20Resume-6366F1?style=flat-square&logo=readthedocs&logoColor=white&labelColor=6366F1)](./NITISH_RESUME_v2.pdf)
+
+</div>
