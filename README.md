@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=30&pause=1200&color=38BDF8&center=true&vCenter=true&width=720&lines=Hi%2C+I'm+Nitish+Kumar+Kushwaha;Full-Stack+Developer;Frontend+%E2%80%A2+Backend+%E2%80%A2+AI+Integrations;Open+to+Internships+and+Entry-Level+Roles" alt="Typing intro" />
+<img src="./assets/tree2-banner.png" alt="Nitish Kumar Kushwaha banner" width="100%" />
 
 <br />
 
@@ -51,16 +51,12 @@ I am a CSE student at IIIT Ranchi focused on building full-stack products that f
 <table>
   <tr>
     <td width="54%" valign="top">
-
-**Built to solve the fragmented interview-prep workflow by combining DSA practice, note-taking, imports, and personalized revision into one workspace.**  
-The technically interesting part was designing an IDE-style experience with problem-level editing, structured content organization, and backend services for imports, recommendations, and user-scoped flows.
-
-**Tech Stack**  
-`React` `Vite` `Tailwind CSS` `Monaco Editor` `Node.js` `Express` `PostgreSQL` `MongoDB` `Clerk` `Docker`
-
-**Links**  
-[Repository](https://github.com/nitishkumarkushwaha21/Algonote) • [Live Demo](http://algonote.duckdns.org/)
-
+      <p><strong>Built to solve the fragmented interview-prep workflow by combining DSA practice, note-taking, imports, and personalized revision into one workspace.</strong></p>
+      <p>The technically interesting part was designing an IDE-style experience with problem-level editing, structured content organization, and backend services for imports, recommendations, and user-scoped flows.</p>
+      <p><strong>Tech Stack</strong><br />
+      <code>React</code> <code>Vite</code> <code>Tailwind CSS</code> <code>Monaco Editor</code> <code>Node.js</code> <code>Express</code> <code>PostgreSQL</code> <code>MongoDB</code> <code>Clerk</code> <code>Docker</code></p>
+      <p><strong>Links</strong><br />
+      <a href="https://github.com/nitishkumarkushwaha21/Algonote">Repository</a> • <a href="http://algonote.duckdns.org/">Live Demo</a></p>
     </td>
     <td width="46%" align="center">
       <img src="./assets/algonote-preview-v2.gif" alt="AlgoNote AI preview" width="100%" />
@@ -78,16 +74,12 @@ The technically interesting part was designing an IDE-style experience with prob
       <img src="./assets/rewear-preview-v2.gif" alt="ReWear preview" width="100%" />
     </td>
     <td width="54%" valign="top">
-
-**Built to make clothing exchange easier by turning casual swapping into a structured product with listings, authentication, profile flows, and a points-based system.**  
-This project helped me work through practical full-stack concerns like protected routes, item lifecycle management, and backend-driven user actions in a real product flow.
-
-**Tech Stack**  
-`React` `Node.js` `Express` `MongoDB` `JWT`
-
-**Links**  
-[Repository](https://github.com/nitishkumarkushwaha21/rewear-clothing-exchange/) • [Live Demo](https://rewear-clothing-exchange-ecru.vercel.app/)
-
+      <p><strong>Built to make clothing exchange easier by turning casual swapping into a structured product with listings, authentication, profile flows, and a points-based system.</strong></p>
+      <p>This project helped me work through practical full-stack concerns like protected routes, item lifecycle management, and backend-driven user actions in a real product flow.</p>
+      <p><strong>Tech Stack</strong><br />
+      <code>React</code> <code>Node.js</code> <code>Express</code> <code>MongoDB</code> <code>JWT</code></p>
+      <p><strong>Links</strong><br />
+      <a href="https://github.com/nitishkumarkushwaha21/rewear-clothing-exchange/">Repository</a> • <a href="https://rewear-clothing-exchange-ecru.vercel.app/">Live Demo</a></p>
     </td>
   </tr>
 </table>
@@ -99,16 +91,12 @@ This project helped me work through practical full-stack concerns like protected
 <table>
   <tr>
     <td width="54%" valign="top">
-
-**Built to help teachers generate structured assessments faster with queue-based AI generation, real-time status updates, and export-ready output.**  
-The strongest engineering part was coordinating frontend workflows with asynchronous backend processing, WebSocket updates, and PDF generation while keeping the user experience smooth.
-
-**Tech Stack**  
-`Next.js` `TypeScript` `Node.js` `Express` `MongoDB` `Redis` `BullMQ` `Socket.IO` `Clerk`
-
-**Links**  
-[Repository](https://github.com/nitishkumarkushwaha21/vedaai-ai-question-maker) • [Live Demo](https://vedaai-ai-question-maker.vercel.app/)
-
+      <p><strong>Built to help teachers generate structured assessments faster with queue-based AI generation, real-time status updates, and export-ready output.</strong></p>
+      <p>The strongest engineering part was coordinating frontend workflows with asynchronous backend processing, WebSocket updates, and PDF generation while keeping the user experience smooth.</p>
+      <p><strong>Tech Stack</strong><br />
+      <code>Next.js</code> <code>TypeScript</code> <code>Node.js</code> <code>Express</code> <code>MongoDB</code> <code>Redis</code> <code>BullMQ</code> <code>Socket.IO</code> <code>Clerk</code></p>
+      <p><strong>Links</strong><br />
+      <a href="https://github.com/nitishkumarkushwaha21/vedaai-ai-question-maker">Repository</a> • <a href="https://vedaai-ai-question-maker.vercel.app/">Live Demo</a></p>
     </td>
     <td width="46%" align="center">
       <img src="./assets/veda-preview-v2.gif" alt="VedaAI preview" width="100%" />
