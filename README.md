@@ -1,4 +1,4 @@
- <div align="center">
+<div align="center">
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=30&pause=1200&color=38BDF8&center=true&vCenter=true&width=720&lines=Hi%2C+I'm+Nitish+Kumar+Kushwaha;Full-Stack+Developer;Frontend+%E2%80%A2+Backend+%E2%80%A2+AI+Integrations;Open+to+Internships+and+Entry-Level+Roles" alt="Typing intro" />
 
@@ -63,7 +63,7 @@ The technically interesting part was designing an IDE-style experience with prob
 
     </td>
     <td width="46%" align="center">
-      <img src="./assets/algonote-preview-v2.gif" alt="AlgoNote AI preview" width="100%" />
+      <img src="https://raw.githubusercontent.com/nitishkumarkushwaha21/nitishkumarkushwaha21/main/images/algonte%20(1).png" alt="AlgoNote AI preview" width="100%" />
     </td>
   </tr>
 </table>
@@ -75,7 +75,7 @@ The technically interesting part was designing an IDE-style experience with prob
 <table>
   <tr>
     <td width="46%" align="center">
-      <img src="./assets/rewear-preview-v2.gif" alt="ReWear preview" width="100%" />
+      <img src="https://raw.githubusercontent.com/nitishkumarkushwaha21/nitishkumarkushwaha21/main/images/rewear%20(1).png" alt="ReWear preview" width="100%" />
     </td>
     <td width="54%" valign="top">
 
@@ -111,7 +111,7 @@ The strongest engineering part was coordinating frontend workflows with asynchro
 
     </td>
     <td width="46%" align="center">
-      <img src="./assets/veda-preview-v2.gif" alt="VedaAI preview" width="100%" />
+      <img src="https://raw.githubusercontent.com/nitishkumarkushwaha21/nitishkumarkushwaha21/main/images/veda%20(1).png" alt="VedaAI preview" width="100%" />
     </td>
   </tr>
 </table>
@@ -177,4 +177,4 @@ I am looking for internships and entry-level roles where I can contribute across
 - LinkedIn: [nitishkumar2026](https://www.linkedin.com/in/nitishkumar2026)
 - LeetCode: [nitishkumarkushwaha](https://leetcode.com/u/nitishkumarkushwaha/)
 - Resume: [View PDF](./NITISH_RESUME_v2.pdf)
-- Email: [nitishkumarkushwaha@hotmail.com](mailto:nitishkumarkushwaha@hotmail.com)   -> images stilln not working
+- Email: [nitishkumarkushwaha@hotmail.com](mailto:nitishkumarkushwaha@hotmail.com)
