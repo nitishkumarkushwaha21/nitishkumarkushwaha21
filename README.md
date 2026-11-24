@@ -1,98 +1,77 @@
-<div align="center">
+<img src="./assets/hero.svg" alt="Nitish Kumar Kushwaha, full-stack engineer. Career trace: IIIT Ranchi B.Tech 2022 to 2026, Reelife and NexisparkX internships, and Software Developer 1 at Bigintsolutions since May 2026, covering payments, a learning platform, automations and a video editor." width="100%" />
 
-<img src="./assets/tree-top-full.jpg" alt="Tree banner" width="100%" />
+<p align="center">
+  <a href="https://www.linkedin.com/in/nitishkumar2026"><b>LinkedIn</b></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://leetcode.com/u/nitishkumarkushwaha/"><b>LeetCode</b></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="./Nitish_Kushwaha_Resume.pdf"><b>Resume</b></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="mailto:nitish.kumar.cse2026@gmail.com"><b>Email</b></a>
+</p>
 
-# Nitish Kumar Kushwaha
+<br />
 
-**Full-Stack Engineer · Production Software & Applied AI**
-
-I take products from idea to production — learning platforms, payments, automation, and AI-backed tools — with clean UX and reliable backends.
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-nitishkumar2026-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nitishkumar2026)
-[![LeetCode](https://img.shields.io/badge/LeetCode-1799%20·%20Top%2010%25-F59E0B?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/nitishkumarkushwaha/)
-[![Resume](https://img.shields.io/badge/Resume-View%20PDF-EA580C?style=for-the-badge&logo=readthedocs&logoColor=white)](./Nitish_Kushwaha_Resume.pdf)
-[![Email](https://img.shields.io/badge/Email-Contact-16A34A?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nitish.kumar.cse2026@gmail.com)
-
-</div>
-
----
-
-## Explainer
-
-<div align="center">
-
-A 1 min 40 sec walkthrough of my work — learning platforms, payments, and full-stack products.
-
-<!-- To play the video inline on GitHub: edit this file on github.com, drag the mp4 into the editor,
-     and replace this whole block with the https://github.com/user-attachments/... link GitHub generates. -->
-<a href="https://drive.google.com/file/d/1mzQ_YsShtPqzAhd4a7Zeyl2s5pEsn8BQ/view?usp=sharing">
-  <img src="./assets/explainer-poster.jpg" alt="Play the Nitish Kumar Kushwaha explainer video" width="100%" />
-</a>
-
-[![Watch the explainer](https://img.shields.io/badge/▶-Watch%20the%20explainer-7C3AED?style=for-the-badge)](https://drive.google.com/file/d/1mzQ_YsShtPqzAhd4a7Zeyl2s5pEsn8BQ/view?usp=sharing)
-
-</div>
-
----
-
-## About Me
-
-- `Software Developer 1` at Bigintsolutions (May 2026 – Present); previously interned at NexisparkX Technologies and Reelife
-- B.Tech in Computer Science and Engineering, IIIT Ranchi (`2022 – 2026`, CGPA `7.83`)
-- LeetCode: `500+` problems, rating `1799` (Top 10%), `50+` contests, `93-day` POTD streak
-- Anthropic API Certified — tool use, RAG, MCP, prompt caching, and agent workflows; I build with AI coding tools every day
-
-> I like building products that reduce friction, simplify messy workflows, and make complex systems feel intuitive.
-
----
+I build full-stack products and take them all the way to production: payment flows that handle real money, automations that remove manual work, and AI features that hold up when the model gets it wrong. Outside work I've solved `500+` LeetCode problems (rating `1799`, top 10%, `93-day` daily streak), and I'm Anthropic API certified in tool use, RAG, MCP, prompt caching and agent workflows.
 
 ## Experience
 
-### Bigintsolutions — Software Developer 1
-`May 2026 – Present` · Remote
+**Bigintsolutions**, Software Developer 1 &nbsp;<sub>May 2026 to now, remote</sub>
 
-- Rebuilt [learn.approachable.dev](https://learn.approachable.dev) from a bare landing page (dashboard, video player, progress tracking) and built [approachable.dev](https://approachable.dev), the company marketing site — first corporate lead within 3 days of launch.
-- Built the payment and billing flow from scratch: Razorpay across iOS and Android (every major method except Apple Pay) with IP-based country pricing, Cashfree as a backup gateway, and server-side price resolution so checkout amounts can't be changed from the client. Processed `Rs.2L+` revenue and `34` payments in month 1, with zero errors.
-- Automated a Razorpay → Zoho Books invoice workflow so every successful payment raises a customer invoice, and built Zoho Flow and n8n automations for bulk and targeted emails and operational workflows.
+- Rebuilt [learn.approachable.dev](https://learn.approachable.dev) from a bare landing page (dashboard, video player, progress tracking) and built [approachable.dev](https://approachable.dev), the company marketing site, which brought its first corporate lead within 3 days of launch.
+- Built the payment and billing flow from scratch: Razorpay across iOS and Android (every major method except Apple Pay) with IP-based country pricing, Cashfree as a backup gateway, and server-side price resolution so checkout amounts can't be changed from the client. It processed `Rs.2L+` across `34` payments in month one, with zero errors.
+- Automated a Razorpay to Zoho Books invoice workflow so every successful payment raises a customer invoice, and built Zoho Flow and n8n automations for bulk and targeted emails and operations.
 - Shipped `3` frontend features for the Haziram production app (`4,000+` workers, `200+` companies) and `1` admin-app feature.
-- Owned Datadog monitoring and debugging across services (see [Debugging Notes](#debugging-notes)).
-- Built a chat-based video editor that cut internal video-editing time from `6–8 hours` to `2–3 hours`.
+- Owned Datadog monitoring and debugging across services; two of those investigations are written up below.
+- Built a chat-based video editor that cut internal editing time from `6–8 hours` to `2–3 hours`.
 - Delivered `600+` commits across `3` projects built from scratch and `1` existing project, in a 6-person team.
 
-### NexisparkX Technologies — MERN Stack Intern
-`April 2026 – May 2026` · Remote
+**NexisparkX Technologies**, MERN intern &nbsp;<sub>Apr to May 2026</sub><br />
+Migrated a production database from Supabase to MongoDB with zero data loss, and built an admin dashboard for NX Solution's Smart Ecosystem platform.
 
-- Migrated a production database from Supabase to MongoDB with zero data loss, and built an admin dashboard for NX Solution’s Smart Ecosystem platform.
+**Reelife**, Full-stack intern &nbsp;<sub>Jun to Aug 2025</sub><br />
+Delivered `10+` production React components and Node.js/Express API routes for an internal e-commerce platform.
 
-### Reelife Private Limited — Full Stack Developer Intern
-`June 2025 – August 2025` · Remote
-
-- Delivered `10+` production-ready React components and Node.js/Express REST API routes for an internal e-commerce platform, and debugged failures in Postman to improve reliability.
-
----
-
-## Featured Projects
-
-### AlgoNote AI
+## Featured projects
 
 <table>
   <tr>
-    <td width="54%" valign="top">
-      <p><strong>Built to solve the fragmented interview-prep workflow by combining DSA practice, note-taking, imports, and personalized revision into one workspace.</strong></p>
-      <p>Architected a microservices backend across 3 services with an API Gateway on a 6-service Docker Compose stack (AWS EC2), exposing 33 REST endpoints. The product side is an IDE-style workspace with a Monaco editor, one-click LeetCode import, and a YouTube-to-revision-sheet pipeline.</p>
-      <p><strong>Tech Stack</strong><br />
-      <code>React</code> <code>Vite</code> <code>Tailwind CSS</code> <code>Monaco Editor</code> <code>Node.js</code> <code>Express</code> <code>PostgreSQL</code> <code>MongoDB</code> <code>Clerk</code> <code>Docker</code></p>
-      <p><strong>Links</strong><br />
-      <a href="https://github.com/nitishkumarkushwaha21/Algonote">Repository</a> • <a href="http://algonote.duckdns.org/">Live Demo</a></p>
+    <td width="55%" valign="top">
+      <h3>AlgoNote AI</h3>
+      <p>Interview prep usually lives across browser tabs, notes apps and spreadsheets. AlgoNote puts DSA practice, notes, imports and revision in one IDE-style workspace.</p>
+      <p>The backend is 3 microservices behind an API gateway, on a 6-container Docker Compose stack on AWS EC2 with 33 REST endpoints. The workspace has a Monaco editor, one-click LeetCode import, and a pipeline that turns a YouTube playlist into a revision sheet.</p>
+      <p><sub>React, Vite, Tailwind CSS, Monaco, Node.js, Express, PostgreSQL, MongoDB, Clerk, Docker</sub></p>
+      <p><a href="https://github.com/nitishkumarkushwaha21/Algonote"><b>Code</b></a>&nbsp;&nbsp;&nbsp;<a href="http://algonote.duckdns.org/"><b>Live demo</b></a></p>
     </td>
-    <td width="46%" align="center">
-      <img src="./images/algonote-1.png" alt="AlgoNote AI preview" width="100%" />
+    <td width="45%" valign="middle">
+      <img src="./assets/algonote-frame.png" alt="AlgoNote dashboard in a browser window" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <td width="55%" valign="top">
+      <h3>n8n Job Hunter</h3>
+      <p>Checking a dozen job boards by hand every day doesn't scale. This hourly n8n workflow finds fresher software roles and emails only the real matches.</p>
+      <p>It pulls listings from YC, RemoteOK, We Work Remotely, Himalayas and company pages on Greenhouse, Lever and Ashby. A regex pass and a list of already-seen jobs remove misses before any AI call. Gemini screens the rest in batches, but code makes the final decision, so a wrong model answer can't push a bad job through. Failed AI calls retry on the next run.</p>
+      <p><sub>n8n, JavaScript, Gemini API, Google Sheets API, Gmail SMTP, Docker</sub></p>
+      <p><a href="https://github.com/nitishkumarkushwaha21/n8n-job-hunter"><b>Code</b></a></p>
+    </td>
+    <td width="45%" valign="middle">
+      <img src="./assets/n8n-job-hunter-flow.svg" alt="Pipeline: collect, pre-filter, skip seen, screen with Gemini, decide in code, notify" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <td width="55%" valign="top">
+      <h3>VedaAI Assessment Creator</h3>
+      <p>Teachers choose question types, marks and difficulty, and an LLM pipeline (OpenRouter, GPT-4o-mini) writes a structured, syllabus-aligned paper they can export as a PDF.</p>
+      <p>Generation runs on a BullMQ and Redis job queue. A background worker streams each job's progress (queued, processing, completed or failed) to the browser over Socket.IO, so a slow model never blocks the page.</p>
+      <p><sub>Next.js, TypeScript, Node.js, Express, MongoDB, Redis, BullMQ, Socket.IO, Clerk</sub></p>
+      <p><a href="https://github.com/nitishkumarkushwaha21/vedaai-ai-question-maker"><b>Code</b></a>&nbsp;&nbsp;&nbsp;<a href="https://vedaai-ai-question-maker.vercel.app/"><b>Live demo</b></a></p>
+    </td>
+    <td width="45%" valign="middle">
+      <img src="./assets/vedaai-frame.png" alt="VedaAI assignment screen in a browser window" width="100%" />
     </td>
   </tr>
 </table>
 
 <details>
-  <summary><strong>More Screenshots</strong></summary>
+  <summary><b>More screenshots</b></summary>
   <br />
   <p align="center">
     <img src="./images/algonote-2.png" alt="AlgoNote screenshot 2" width="32%" />
@@ -102,163 +81,56 @@ A 1 min 40 sec walkthrough of my work — learning platforms, payments, and full
   <p align="center">
     <img src="./images/algonote-5.png" alt="AlgoNote screenshot 5" width="32%" />
     <img src="./images/algonote-6.png" alt="AlgoNote screenshot 6" width="32%" />
+    <img src="./images/veda-2.png" alt="VedaAI screenshot 2" width="32%" />
   </p>
-</details>
-
----
-
-### n8n Job Hunter
-
-<table>
-  <tr>
-    <td width="46%" align="center">
-      <img src="./assets/n8n-job-hunter-flow.svg" alt="n8n Job Hunter pipeline: collect, pre-filter, deduplicate, AI screen, rules in code, notify" width="100%" />
-    </td>
-    <td width="54%" valign="top">
-      <p><strong>Built to stop manually checking a dozen job boards every day — an hourly pipeline that finds fresher software roles and emails only the real matches.</strong></p>
-      <p>A 23-node n8n workflow pulls new listings from YC, RemoteOK, We Work Remotely, Himalayas, and company pages on Greenhouse, Lever, and Ashby. A cheap regex pass and a Google Sheets "seen" list filter out misses and duplicates before any AI call; Gemini then screens the rest in batches for fit, experience, and salary in ₹. The final decision is made by code, not the model, and failed AI calls retry on the next run.</p>
-      <p><strong>Tech Stack</strong><br />
-      <code>n8n</code> <code>JavaScript</code> <code>Google Gemini API</code> <code>Google Sheets API</code> <code>Gmail SMTP</code> <code>Docker</code></p>
-      <p><strong>Links</strong><br />
-      <a href="https://github.com/nitishkumarkushwaha21/n8n-job-hunter">Repository</a></p>
-    </td>
-  </tr>
-</table>
-
----
-
-### VedaAI Assessment Creator
-
-<table>
-  <tr>
-    <td width="54%" valign="top">
-      <p><strong>Built so teachers can configure question types, marks, and difficulty, then generate a structured, syllabus-aligned paper through an LLM pipeline (OpenRouter, GPT-4o-mini).</strong></p>
-      <p>The strongest engineering part was an async job queue (BullMQ, Redis) with a background worker that streams real-time progress — queued, processing, completed, or failed — to the client over Socket.IO, plus direct PDF export.</p>
-      <p><strong>Tech Stack</strong><br />
-      <code>Next.js</code> <code>TypeScript</code> <code>Node.js</code> <code>Express</code> <code>MongoDB</code> <code>Redis</code> <code>BullMQ</code> <code>Socket.IO</code> <code>Clerk</code></p>
-      <p><strong>Links</strong><br />
-      <a href="https://github.com/nitishkumarkushwaha21/vedaai-ai-question-maker">Repository</a> • <a href="https://vedaai-ai-question-maker.vercel.app/">Live Demo</a></p>
-    </td>
-    <td width="46%" align="center">
-      <img src="./images/veda-1.png" alt="VedaAI preview" width="100%" />
-    </td>
-  </tr>
-</table>
-
-<details>
-  <summary><strong>More Screenshots</strong></summary>
-  <br />
   <p align="center">
-    <img src="./images/veda-2.png" alt="VedaAI screenshot 2" width="48%" />
-    <img src="./images/veda-3.png" alt="VedaAI screenshot 3" width="48%" />
-  </p>
-</details>
-
----
-
-## More Projects
-
-| Project | What it is | Stack |
-| --- | --- | --- |
-| **[BuiltByWho](https://freelancer-xi-nine.vercel.app/)** | Studio site for scoping and shipping client websites — case studies (PULSE, Drishya Trails, Root &amp; Rise), services, and a lead form backed by an API for projects, reviews, and inquiries | React, Vite, Node.js, Express, MongoDB |
-| **Vantage** *(in progress)* | Real-estate management product | React, Python, PostgreSQL, Docker |
-| **Notes extension** | Browser notes with version history — cut repetitive form-filling from about 10 minutes to 1 | JavaScript |
-| **Telegram job finder** | Pulls job posts from Telegram channels — cut a 3–4 hour manual search to about 30 minutes | Automation |
-
-<details>
-  <summary><strong>BuiltByWho screenshots</strong></summary>
-  <br />
-  <p align="center">
-    <img src="./images/builtbywho-1.png" alt="BuiltByWho screenshot 1" width="32%" />
+    <img src="./images/veda-3.png" alt="VedaAI screenshot 3" width="32%" />
     <img src="./images/builtbywho-2.png" alt="BuiltByWho screenshot 2" width="32%" />
     <img src="./images/builtbywho-3.png" alt="BuiltByWho screenshot 3" width="32%" />
   </p>
-  <p align="center">
-    <img src="./images/builtbywho-4.png" alt="BuiltByWho screenshot 4" width="32%" />
-    <img src="./images/builtbywho-5.png" alt="BuiltByWho screenshot 5" width="32%" />
-  </p>
 </details>
 
----
+## Video walkthrough
 
-## Debugging Notes
+<a href="https://drive.google.com/file/d/1mzQ_YsShtPqzAhd4a7Zeyl2s5pEsn8BQ/view?usp=sharing">
+  <img src="./assets/explainer-poster.jpg" alt="Play the 1 minute 40 second explainer video" width="100%" />
+</a>
+<p align="center"><a href="https://drive.google.com/file/d/1mzQ_YsShtPqzAhd4a7Zeyl2s5pEsn8BQ/view?usp=sharing">Watch the 1:40 walkthrough of my work</a></p>
 
-**A payment gateway that failed with correct code.** A Cashfree integration had to ship in a day, but test payments kept failing even though the application code looked right. I instrumented the API calls, then built a minimal HTML page that called Cashfree directly across API versions. That isolated the failure to the gateway itself; Cashfree confirmed and fixed it the next day, with no changes to our code.
+<!-- To play the video inline on GitHub: edit this file on github.com, drag the mp4 into the editor,
+     and replace the two blocks above with the https://github.com/user-attachments/... link GitHub generates. -->
 
-**AI onboarding that finished but produced no profile.** Users completed the onboarding chat, yet their profiles never generated. Correlating Datadog session replays, backend logs, and MongoDB data traced it to concurrent session creation, inconsistent session IDs, and requests exceeding Heroku's 30s timeout — which drove fixes for session consistency, concurrency, recovering saved AI data, and long-running requests.
+## Also built
 
-> My rule from both: reduce the system to a reproducible case and find the failing boundary before changing code.
+<table>
+  <tr>
+    <td width="45%" valign="middle">
+      <a href="https://freelancer-xi-nine.vercel.app/"><img src="./assets/builtbywho-frame.png" alt="BuiltByWho studio site in a browser window" width="100%" /></a>
+    </td>
+    <td width="55%" valign="top">
+      <h3>BuiltByWho</h3>
+      <p>A studio site for scoping and shipping client websites, with case studies (PULSE, Drishya Trails, Root &amp; Rise), services and a lead form. A React frontend talks to an Express and MongoDB API for projects, reviews and inquiries.</p>
+      <p><a href="https://freelancer-xi-nine.vercel.app/"><b>Live site</b></a></p>
+    </td>
+  </tr>
+</table>
 
----
+- **Vantage** (in progress): a real-estate management product in React, Python, PostgreSQL and Docker.
+- **Notes extension**: notes with version history that cut repetitive form-filling from about 10 minutes to 1.
+- **Telegram job finder**: pulls job posts from Telegram channels and turned a 3–4 hour manual search into about 30 minutes.
 
-## Skills
+## Debugging notes
 
-<div align="center">
+**A payment gateway that failed while our code was correct.** A Cashfree integration had to ship in a day, but test payments kept failing. I instrumented the API calls, then built a minimal HTML page that called Cashfree directly across API versions. That isolated the failure to the gateway itself. Cashfree confirmed it and fixed it the next day, with no change to our code.
 
-### Languages
+**An AI onboarding chat that finished but never produced a profile.** Users completed the chat, yet their profiles were never generated. Lining up Datadog session replays, backend logs and MongoDB records traced it to concurrent session creation, inconsistent session IDs, and requests running past Heroku's 30-second limit. The fixes covered session consistency, concurrency, recovering saved AI data, and long-running requests.
 
-![JavaScript](https://img.shields.io/badge/JavaScript-1E293B?style=for-the-badge&logo=javascript&logoColor=FACC15)
-![TypeScript](https://img.shields.io/badge/TypeScript-1E293B?style=for-the-badge&logo=typescript&logoColor=38BDF8)
-![C++](https://img.shields.io/badge/C++-1E293B?style=for-the-badge&logo=cplusplus&logoColor=60A5FA)
-![Python](https://img.shields.io/badge/Python-1E293B?style=for-the-badge&logo=python&logoColor=A78BFA)
-![SQL](https://img.shields.io/badge/SQL-1E293B?style=for-the-badge&logo=postgresql&logoColor=93C5FD)
+What both taught me: shrink the system to a case you can reproduce, and find the failing boundary before changing any code.
 
-### Frontend
+## Stack
 
-![React](https://img.shields.io/badge/React-0F172A?style=for-the-badge&logo=react&logoColor=67E8F9)
-![Next.js](https://img.shields.io/badge/Next.js-0F172A?style=for-the-badge&logo=nextdotjs&logoColor=ffffff)
-![Vite](https://img.shields.io/badge/Vite-0F172A?style=for-the-badge&logo=vite&logoColor=C084FC)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-0F172A?style=for-the-badge&logo=tailwindcss&logoColor=22D3EE)
-![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-0F172A?style=for-the-badge&logo=shadcnui&logoColor=ffffff)
-![Zustand](https://img.shields.io/badge/Zustand-0F172A?style=for-the-badge&logo=react&logoColor=F59E0B)
+<img src="./assets/stack.svg" alt="Tech stack by layer. Client: React, Next.js, TypeScript, Tailwind CSS, shadcn/ui, Zustand, Monaco. Services: Node.js, Express, Socket.IO, BullMQ, Zod, Clerk. Data: PostgreSQL, MongoDB, MySQL, Redis. Payments and ops: Razorpay, Cashfree, Zoho Books, Zoho Flow, Datadog. AI and automation: Anthropic API, MCP, RAG, Gemini, OpenRouter, n8n. Infrastructure: Docker, AWS EC2, Nginx, Vercel, Heroku, Git." width="100%" />
 
-### Backend
+<br />
 
-![Node.js](https://img.shields.io/badge/Node.js-111827?style=for-the-badge&logo=nodedotjs&logoColor=4ADE80)
-![Express](https://img.shields.io/badge/Express-111827?style=for-the-badge&logo=express&logoColor=F8FAFC)
-![Socket.IO](https://img.shields.io/badge/Socket.IO-111827?style=for-the-badge&logo=socketdotio&logoColor=ffffff)
-![BullMQ](https://img.shields.io/badge/BullMQ-111827?style=for-the-badge&logo=redis&logoColor=F87171)
-![Zod](https://img.shields.io/badge/Zod-111827?style=for-the-badge&logo=zod&logoColor=C4B5FD)
-![Clerk](https://img.shields.io/badge/Clerk-111827?style=for-the-badge&logo=clerk&logoColor=F8FAFC)
-![Nginx](https://img.shields.io/badge/Nginx-111827?style=for-the-badge&logo=nginx&logoColor=4ADE80)
-
-### Databases and Infrastructure
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-172554?style=for-the-badge&logo=postgresql&logoColor=93C5FD)
-![MongoDB](https://img.shields.io/badge/MongoDB-172554?style=for-the-badge&logo=mongodb&logoColor=4ADE80)
-![MySQL](https://img.shields.io/badge/MySQL-172554?style=for-the-badge&logo=mysql&logoColor=7DD3FC)
-![Redis](https://img.shields.io/badge/Redis-172554?style=for-the-badge&logo=redis&logoColor=F87171)
-![Docker](https://img.shields.io/badge/Docker-172554?style=for-the-badge&logo=docker&logoColor=38BDF8)
-![AWS](https://img.shields.io/badge/AWS%20EC2-172554?style=for-the-badge&logo=amazonaws&logoColor=FBBF24)
-![Vercel](https://img.shields.io/badge/Vercel-172554?style=for-the-badge&logo=vercel&logoColor=ffffff)
-![Git](https://img.shields.io/badge/Git-172554?style=for-the-badge&logo=git&logoColor=FB7185)
-![Postman](https://img.shields.io/badge/Postman-172554?style=for-the-badge&logo=postman&logoColor=FB923C)
-
-### Payments, Automation, Monitoring, and AI
-
-![Razorpay](https://img.shields.io/badge/Razorpay-1C1917?style=for-the-badge&logo=razorpay&logoColor=3395FF)
-![Cashfree](https://img.shields.io/badge/Cashfree-1C1917?style=for-the-badge)
-![Zoho](https://img.shields.io/badge/Zoho%20Books%20%26%20Flow-1C1917?style=for-the-badge&logo=zoho&logoColor=F87171)
-![n8n](https://img.shields.io/badge/n8n-1C1917?style=for-the-badge&logo=n8n&logoColor=EA4B71)
-![Datadog](https://img.shields.io/badge/Datadog-1C1917?style=for-the-badge&logo=datadog&logoColor=A78BFA)
-![Gemini](https://img.shields.io/badge/Gemini%20API-1C1917?style=for-the-badge&logo=googlegemini&logoColor=8AB4F8)
-![Anthropic](https://img.shields.io/badge/Anthropic_API-1C1917?style=for-the-badge&logo=anthropic&logoColor=D4A574)
-![MCP](https://img.shields.io/badge/MCP-1C1917?style=for-the-badge&logo=anthropic&logoColor=F8FAFC)
-
-</div>
-
----
-
-## 🔭 Currently
-
-| Area | What I'm doing |
-|------|----------------|
-| 🏗️ Building | Production work at Bigintsolutions — learning platform, payments, invoicing, automation, and monitoring |
-| 🧪 Side project | Vantage, a real-estate management product (React, Python, PostgreSQL, Docker) |
-| 🏀 Beyond code | Captained the IIIT Ranchi basketball team; Vice Head of the Gaming Society (`3+` events, `100+` participants) |
-
-<div align="center">
-
-<sub>Reach me at <a href="mailto:nitish.kumar.cse2026@gmail.com">nitish.kumar.cse2026@gmail.com</a> or on <a href="https://www.linkedin.com/in/nitishkumar2026">LinkedIn</a>.</sub>
-
-</div>
+Away from the keyboard I captained IIIT Ranchi's basketball team in inter-IIIT tournaments and was vice head of the gaming society. The quickest way to reach me is [email](mailto:nitish.kumar.cse2026@gmail.com) or [LinkedIn](https://www.linkedin.com/in/nitishkumar2026).
