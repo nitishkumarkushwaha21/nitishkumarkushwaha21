@@ -1,4 +1,4 @@
-<img src="./assets/hero.svg" alt="Nitish Kumar Kushwaha, full-stack engineer. Career trace: IIIT Ranchi B.Tech 2022 to 2026, Reelife and NexisparkX internships, and Software Developer 1 at Bigintsolutions since May 2026, covering payments, a learning platform, automations and a video editor." width="100%" />
+<img src="./assets/hero-tree.svg" alt="Nitish Kumar Kushwaha, full-stack engineer, under a tree in a night sky. Career trace: IIIT Ranchi B.Tech 2022 to 2026, Reelife and NexisparkX internships, and Software Developer 1 at Bigintsolutions since May 2026, covering payments, a learning platform, automations and a video editor." width="100%" />
 
 <p align="center">
   <a href="https://www.linkedin.com/in/nitishkumar2026"><b>LinkedIn</b></a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -31,62 +31,54 @@ Delivered `10+` production React components and Node.js/Express API routes for a
 
 ## Featured projects
 
-<table>
-  <tr>
-    <td width="55%" valign="top">
-      <h3>AlgoNote AI</h3>
-      <p>Interview prep usually lives across browser tabs, notes apps and spreadsheets. AlgoNote puts DSA practice, notes, imports and revision in one IDE-style workspace.</p>
-      <p>The backend is 3 microservices behind an API gateway, on a 6-container Docker Compose stack on AWS EC2 with 33 REST endpoints. The workspace has a Monaco editor, one-click LeetCode import, and a pipeline that turns a YouTube playlist into a revision sheet.</p>
-      <p><sub>React, Vite, Tailwind CSS, Monaco, Node.js, Express, PostgreSQL, MongoDB, Clerk, Docker</sub></p>
-      <p><a href="https://github.com/nitishkumarkushwaha21/Algonote"><b>Code</b></a>&nbsp;&nbsp;&nbsp;<a href="http://algonote.duckdns.org/"><b>Live demo</b></a></p>
-    </td>
-    <td width="45%" valign="middle">
-      <img src="./assets/algonote-frame.png" alt="AlgoNote dashboard in a browser window" width="100%" />
-    </td>
-  </tr>
-  <tr>
-    <td width="55%" valign="top">
-      <h3>n8n Job Hunter</h3>
-      <p>Checking a dozen job boards by hand every day doesn't scale. This hourly n8n workflow finds fresher software roles and emails only the real matches.</p>
-      <p>It pulls listings from YC, RemoteOK, We Work Remotely, Himalayas and company pages on Greenhouse, Lever and Ashby. A regex pass and a list of already-seen jobs remove misses before any AI call. Gemini screens the rest in batches, but code makes the final decision, so a wrong model answer can't push a bad job through. Failed AI calls retry on the next run.</p>
-      <p><sub>n8n, JavaScript, Gemini API, Google Sheets API, Gmail SMTP, Docker</sub></p>
-      <p><a href="https://github.com/nitishkumarkushwaha21/n8n-job-hunter"><b>Code</b></a></p>
-    </td>
-    <td width="45%" valign="middle">
-      <img src="./assets/n8n-job-hunter-flow.svg" alt="Pipeline: collect, pre-filter, skip seen, screen with Gemini, decide in code, notify" width="100%" />
-    </td>
-  </tr>
-  <tr>
-    <td width="55%" valign="top">
-      <h3>VedaAI Assessment Creator</h3>
-      <p>Teachers choose question types, marks and difficulty, and an LLM pipeline (OpenRouter, GPT-4o-mini) writes a structured, syllabus-aligned paper they can export as a PDF.</p>
-      <p>Generation runs on a BullMQ and Redis job queue. A background worker streams each job's progress (queued, processing, completed or failed) to the browser over Socket.IO, so a slow model never blocks the page.</p>
-      <p><sub>Next.js, TypeScript, Node.js, Express, MongoDB, Redis, BullMQ, Socket.IO, Clerk</sub></p>
-      <p><a href="https://github.com/nitishkumarkushwaha21/vedaai-ai-question-maker"><b>Code</b></a>&nbsp;&nbsp;&nbsp;<a href="https://vedaai-ai-question-maker.vercel.app/"><b>Live demo</b></a></p>
-    </td>
-    <td width="45%" valign="middle">
-      <img src="./assets/vedaai-frame.png" alt="VedaAI assignment screen in a browser window" width="100%" />
-    </td>
-  </tr>
-</table>
+<a href="https://github.com/nitishkumarkushwaha21/Algonote"><img src="./assets/card-algonote.svg" alt="AlgoNote AI: DSA practice, notes, imports and revision in one IDE-style workspace. 3 microservices, 33 REST endpoints, 6 containers on AWS EC2." width="100%" /></a>
+
+Interview prep usually lives across browser tabs, notes apps and spreadsheets. AlgoNote's backend is 3 microservices behind an API gateway on a 6-container Docker Compose stack on AWS EC2. The workspace has a Monaco editor, one-click LeetCode import, and a pipeline that turns a YouTube playlist into a revision sheet.
+
+**[Code](https://github.com/nitishkumarkushwaha21/Algonote)** &nbsp;&nbsp; **[Live demo](http://algonote.duckdns.org/)**
 
 <details>
-  <summary><b>More screenshots</b></summary>
+  <summary><b>AlgoNote screenshots (6)</b></summary>
   <br />
   <p align="center">
-    <img src="./images/algonote-2.png" alt="AlgoNote screenshot 2" width="32%" />
-    <img src="./images/algonote-3.png" alt="AlgoNote screenshot 3" width="32%" />
-    <img src="./images/algonote-4.png" alt="AlgoNote screenshot 4" width="32%" />
+    <img src="./assets/shots/algonote-1.png" alt="AlgoNote screenshot 1" width="49%" />
+    <img src="./assets/shots/algonote-2.png" alt="AlgoNote screenshot 2" width="49%" />
   </p>
   <p align="center">
-    <img src="./images/algonote-5.png" alt="AlgoNote screenshot 5" width="32%" />
-    <img src="./images/algonote-6.png" alt="AlgoNote screenshot 6" width="32%" />
-    <img src="./images/veda-2.png" alt="VedaAI screenshot 2" width="32%" />
+    <img src="./assets/shots/algonote-3.png" alt="AlgoNote screenshot 3" width="49%" />
+    <img src="./assets/shots/algonote-4.png" alt="AlgoNote screenshot 4" width="49%" />
   </p>
   <p align="center">
-    <img src="./images/veda-3.png" alt="VedaAI screenshot 3" width="32%" />
-    <img src="./images/builtbywho-2.png" alt="BuiltByWho screenshot 2" width="32%" />
-    <img src="./images/builtbywho-3.png" alt="BuiltByWho screenshot 3" width="32%" />
+    <img src="./assets/shots/algonote-5.png" alt="AlgoNote screenshot 5" width="49%" />
+    <img src="./assets/shots/algonote-6.png" alt="AlgoNote screenshot 6" width="49%" />
+  </p>
+</details>
+
+<br />
+
+<a href="https://github.com/nitishkumarkushwaha21/n8n-job-hunter"><img src="./assets/card-jobhunter.svg" alt="n8n Job Hunter: an hourly workflow over 7 job sources with 23 nodes. Gemini screens, code decides." width="100%" /></a>
+
+It pulls listings from YC, RemoteOK, We Work Remotely, Himalayas and company pages on Greenhouse, Lever and Ashby. A regex pass and a list of already-seen jobs remove misses before any AI call. Gemini screens the rest in batches of 12, but code makes the final decision, so a wrong model answer can't push a bad job through. Failed AI calls retry on the next run.
+
+**[Code](https://github.com/nitishkumarkushwaha21/n8n-job-hunter)**
+
+<br />
+
+<a href="https://github.com/nitishkumarkushwaha21/vedaai-ai-question-maker"><img src="./assets/card-vedaai.svg" alt="VedaAI: LLM-generated question papers, generated on a BullMQ queue with live progress over Socket.IO, and PDF export." width="100%" /></a>
+
+An LLM pipeline (OpenRouter, GPT-4o-mini) writes a structured, syllabus-aligned paper from the teacher's settings. Generation runs on a BullMQ and Redis job queue, and a background worker streams each job's progress (queued, processing, completed or failed) to the browser over Socket.IO.
+
+**[Code](https://github.com/nitishkumarkushwaha21/vedaai-ai-question-maker)** &nbsp;&nbsp; **[Live demo](https://vedaai-ai-question-maker.vercel.app/)**
+
+<details>
+  <summary><b>VedaAI screenshots (3)</b></summary>
+  <br />
+  <p align="center">
+    <img src="./assets/shots/veda-1.png" alt="VedaAI screenshot 1" width="49%" />
+    <img src="./assets/shots/veda-2.png" alt="VedaAI screenshot 2" width="49%" />
+  </p>
+  <p align="center">
+    <img src="./assets/shots/veda-3.png" alt="VedaAI screenshot 3" width="49%" />
   </p>
 </details>
 
@@ -105,7 +97,7 @@ Delivered `10+` production React components and Node.js/Express API routes for a
 <table>
   <tr>
     <td width="45%" valign="middle">
-      <a href="https://freelancer-xi-nine.vercel.app/"><img src="./assets/builtbywho-frame.png" alt="BuiltByWho studio site in a browser window" width="100%" /></a>
+      <a href="https://freelancer-xi-nine.vercel.app/"><img src="./assets/shots/builtbywho-1.png" alt="BuiltByWho studio site in a browser window" width="100%" /></a>
     </td>
     <td width="55%" valign="top">
       <h3>BuiltByWho</h3>
@@ -114,6 +106,19 @@ Delivered `10+` production React components and Node.js/Express API routes for a
     </td>
   </tr>
 </table>
+
+<details>
+  <summary><b>BuiltByWho screenshots (4)</b></summary>
+  <br />
+  <p align="center">
+    <img src="./assets/shots/builtbywho-2.png" alt="BuiltByWho screenshot 2" width="49%" />
+    <img src="./assets/shots/builtbywho-3.png" alt="BuiltByWho screenshot 3" width="49%" />
+  </p>
+  <p align="center">
+    <img src="./assets/shots/builtbywho-4.png" alt="BuiltByWho screenshot 4" width="49%" />
+    <img src="./assets/shots/builtbywho-5.png" alt="BuiltByWho screenshot 5" width="49%" />
+  </p>
+</details>
 
 - **Vantage** (in progress): a real-estate management product in React, Python, PostgreSQL and Docker.
 - **Notes extension**: notes with version history that cut repetitive form-filling from about 10 minutes to 1.
@@ -129,7 +134,7 @@ What both taught me: shrink the system to a case you can reproduce, and find the
 
 ## Stack
 
-<img src="./assets/stack.svg" alt="Tech stack by layer. Client: React, Next.js, TypeScript, Tailwind CSS, shadcn/ui, Zustand, Monaco. Services: Node.js, Express, Socket.IO, BullMQ, Zod, Clerk. Data: PostgreSQL, MongoDB, MySQL, Redis. Payments and ops: Razorpay, Cashfree, Zoho Books, Zoho Flow, Datadog. AI and automation: Anthropic API, MCP, RAG, Gemini, OpenRouter, n8n. Infrastructure: Docker, AWS EC2, Nginx, Vercel, Heroku, Git." width="100%" />
+<img src="./assets/stack-layers.svg" alt="Tech stack by layer. Client: React, Next.js, TypeScript, Tailwind CSS, shadcn/ui, Zustand, Monaco. Services: Node.js, Express, Socket.IO, BullMQ, Zod, Clerk. Data: PostgreSQL, MongoDB, MySQL, Redis. Payments and ops: Razorpay, Cashfree, Zoho Books, Zoho Flow, Datadog. AI and automation: Anthropic API, MCP, RAG, Gemini, OpenRouter, n8n. Infrastructure: Docker, AWS EC2, Nginx, Vercel, Heroku, Git." width="100%" />
 
 <br />
 
