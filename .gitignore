@@ -10,3 +10,6 @@ desktop.ini
 # Large media: upload videos through the GitHub editor instead
 *.mp4
 *.mov
+
+# The profile walkthrough video is meant to be committed
+!assets/walkthrough.mp4

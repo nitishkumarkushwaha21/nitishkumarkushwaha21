@@ -84,13 +84,9 @@ An LLM pipeline (OpenRouter, GPT-4o-mini) writes a structured, syllabus-aligned 
 
 ## Video walkthrough
 
-<a href="https://drive.google.com/file/d/1mzQ_YsShtPqzAhd4a7Zeyl2s5pEsn8BQ/view?usp=sharing">
-  <img src="./assets/explainer-poster.jpg" alt="Play the 1 minute 40 second explainer video" width="100%" />
-</a>
-<p align="center"><a href="https://drive.google.com/file/d/1mzQ_YsShtPqzAhd4a7Zeyl2s5pEsn8BQ/view?usp=sharing">Watch the 1:40 walkthrough of my work</a></p>
+<a href="./assets/walkthrough.mp4"><img src="./assets/walkthrough-thumb.jpg" alt="Play a 3-minute video walkthrough by Nitish Kumar Kushwaha" width="100%" /></a>
 
-<!-- To play the video inline on GitHub: edit this file on github.com, drag the mp4 into the editor,
-     and replace the two blocks above with the https://github.com/user-attachments/... link GitHub generates. -->
+<p align="center"><a href="./assets/walkthrough.mp4"><b>▶ Watch the 3-minute walkthrough</b></a>: payments, debugging stories and projects, narrated.</p>
 
 ## Also built
 
