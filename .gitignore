@@ -1,0 +1,12 @@
+# Local tooling and notes — keep out of the public profile
+.pythonlibs/
+__pycache__/
+*.txt
+.env*
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large media: upload videos through the GitHub editor instead
+*.mp4
+*.mov
