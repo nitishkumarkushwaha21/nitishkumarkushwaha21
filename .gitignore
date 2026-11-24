@@ -11,5 +11,3 @@ desktop.ini
 *.mp4
 *.mov
 
-# The profile walkthrough video is meant to be committed
-!assets/walkthrough.mp4
